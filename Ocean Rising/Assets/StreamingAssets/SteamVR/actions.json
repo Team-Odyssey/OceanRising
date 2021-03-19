@@ -54,6 +54,20 @@
       "type": "vector2"
     },
     {
+      "name": "/actions/default/in/NewAction",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/default/in/RightTrigger",
+      "type": "boolean",
+      "requirement": "mandatory"
+    },
+    {
+      "name": "/actions/default/in/LeftTrigger",
+      "type": "boolean",
+      "requirement": "mandatory"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -90,7 +104,7 @@
   "action_sets": [
     {
       "name": "/actions/default",
-      "usage": "single"
+      "usage": "leftright"
     },
     {
       "name": "/actions/platformer",
