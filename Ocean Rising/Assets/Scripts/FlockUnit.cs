@@ -12,10 +12,11 @@ public class FlockUnit : MonoBehaviour
 	public float smoothDamp { get { return _smoothDamp; } }
 
 	private Vector3 _currentVelocity;
-	public Vector3 currentVelocity { get; set; }
+	public Vector3 currentVelocity { get { return _currentVelocity; } set { _currentVelocity = value; } }
 
 	private Flock assignedFlock;
-	public float speed { get; set; }
+
+	public float speed;
 
 	public Transform myTransform { get; set; }
 
@@ -33,4 +34,6 @@ public class FlockUnit : MonoBehaviour
 	{
 		this.speed = speed;
 	}
+
+
 }

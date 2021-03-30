@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Jobs;
-using UnityEngine.Jobs;
 using Unity.Collections;
+using UnityEngine.Jobs;
 using Unity.Burst;
 
 public class Flock : MonoBehaviour
 {
+	[SerializeField] Transform playerTransform;
+
 	[Header("Spawn Setup")]
-	[SerializeField] private FlockUnit flockUnitPrefab;
+	[SerializeField] private FlockUnit[] avaliableflockUnitPrefabs;
 	[SerializeField] private int flockSize;
 	[SerializeField] private Vector3 spawnBounds;
 
@@ -60,7 +62,7 @@ public class Flock : MonoBehaviour
 	[SerializeField] private float _aligementWeight;
 	public float aligementWeight { get { return _aligementWeight; } }
 
-	[Range(0, 10)]
+	[Range(0, 100)]
 	[SerializeField] private float _boundsWeight;
 	public float boundsWeight { get { return _boundsWeight; } }
 
@@ -69,95 +71,93 @@ public class Flock : MonoBehaviour
 	public float obstacleWeight { get { return _obstacleWeight; } }
 
 	public FlockUnit[] allUnits { get; set; }
+	private FlockUnit flockUnitPrefab;
 
 	private void Start()
 	{
+		SetRandomValues();
 		GenerateUnits();
-		SetRandomFlockValues();
 	}
 
-	private void SetRandomFlockValues()
+	private void SetRandomValues()
 	{
 		_boundsDistance = UnityEngine.Random.Range(5f, 30f);
 		_cohesionWeight = UnityEngine.Random.Range(1f, 10f);
-		_cohesionWeight = UnityEngine.Random.Range(1f, 10f);
+		_aligementWeight = UnityEngine.Random.Range(1f, 10f);
 		_avoidanceWeight = UnityEngine.Random.Range(1f, 10f);
 		_minSpeed = UnityEngine.Random.Range(1f, 2f);
-		_maxSpeed = UnityEngine.Random.Range(2f, 5f);
+		_maxSpeed = UnityEngine.Random.Range(2f, 4f);
 	}
 
 	private void Update()
 	{
 		NativeArray<Vector3> unitForwardDirections = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
-		NativeArray<Vector3> unitCurrentVelocities = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
 		NativeArray<Vector3> unitPositions = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
+		NativeArray<Vector3> currentVelocities = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
 		NativeArray<Vector3> cohesionNeighbours = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
 		NativeArray<Vector3> avoidanceNeighbours = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
 		NativeArray<Vector3> aligementNeighbours = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
-		NativeArray<Vector3> aligementNeighboursDirecions = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
 		NativeArray<float> allUnitsSpeeds = new NativeArray<float>(allUnits.Length, Allocator.TempJob);
 		NativeArray<float> neighbourSpeeds = new NativeArray<float>(allUnits.Length, Allocator.TempJob);
-
 		for (int i = 0; i < allUnits.Length; i++)
 		{
 			unitForwardDirections[i] = allUnits[i].myTransform.forward;
-			unitCurrentVelocities[i] = allUnits[i].currentVelocity;
 			unitPositions[i] = allUnits[i].myTransform.position;
+			currentVelocities[i] = allUnits[i].currentVelocity;
 			cohesionNeighbours[i] = Vector3.zero;
 			avoidanceNeighbours[i] = Vector3.zero;
 			aligementNeighbours[i] = Vector3.zero;
-			aligementNeighboursDirecions[i] = Vector3.zero;
 			allUnitsSpeeds[i] = allUnits[i].speed;
 			neighbourSpeeds[i] = 0f;
-		}
 
+		}
 		MoveJob moveJob = new MoveJob
 		{
 			unitForwardDirections = unitForwardDirections,
-			unitCurrentVelocities = unitCurrentVelocities,
 			unitPositions = unitPositions,
-			cohesionNeighbours = cohesionNeighbours,
-			avoidanceNeighbours = avoidanceNeighbours,
-			aligementNeighbours = aligementNeighbours,
-			aligementNeighboursDirecions = aligementNeighboursDirecions,
+			currentVelocities = currentVelocities,
 			allUnitsSpeeds = allUnitsSpeeds,
-			neighbourSpeeds = neighbourSpeeds,
+			flockPosition = transform.position,
 			cohesionDistance = cohesionDistance,
-			avoidanceDistance = avoidanceDistance,
 			aligementDistance = aligementDistance,
-			boundsDistance = boundsDistance,
+			avoidanceDistance = avoidanceDistance,
 			obstacleDistance = obstacleDistance,
+			boundsDistance = boundsDistance,
 			cohesionWeight = cohesionWeight,
-			avoidanceWeight = avoidanceWeight,
 			aligementWeight = aligementWeight,
-			boundsWeight = boundsWeight,
+			avoidanceWeight = avoidanceWeight,
 			obstacleWeight = obstacleWeight,
-			fovAngle = flockUnitPrefab.FOVAngle,
+			boundsWeight = boundsWeight,
+			angle = flockUnitPrefab.FOVAngle,
 			minSpeed = minSpeed,
 			maxSpeed = maxSpeed,
 			smoothDamp = flockUnitPrefab.smoothDamp,
-			flockPosition = transform.position,
-			deltaTime = Time.deltaTime
+			deltaTime = Time.deltaTime,
+			cohesionNeighbours = cohesionNeighbours,
+			avoidanceNeighbours = avoidanceNeighbours,
+			aligementNeighbours = aligementNeighbours,
+			neighbourSpeeds = neighbourSpeeds,
+			playerPosition = playerTransform.position,
+			randomDirection = UnityEngine.Random.insideUnitSphere
 		};
 
-		JobHandle handle = moveJob.Schedule(allUnits.Length, 5);
-		handle.Complete();
+		JobHandle jobHandle = moveJob.Schedule(allUnits.Length,100);
+		jobHandle.Complete();
+
 		for (int i = 0; i < allUnits.Length; i++)
 		{
 			allUnits[i].myTransform.forward = unitForwardDirections[i];
 			allUnits[i].myTransform.position = unitPositions[i];
-			allUnits[i].currentVelocity = unitCurrentVelocities[i];
+			allUnits[i].currentVelocity = currentVelocities[i];
 			allUnits[i].speed = allUnitsSpeeds[i];
 		}
-
 		unitForwardDirections.Dispose();
-		unitCurrentVelocities.Dispose();
 		unitPositions.Dispose();
+		currentVelocities.Dispose();
+		allUnitsSpeeds.Dispose();
 		cohesionNeighbours.Dispose();
 		avoidanceNeighbours.Dispose();
 		aligementNeighbours.Dispose();
-		aligementNeighboursDirecions.Dispose();
-		allUnitsSpeeds.Dispose();
 		neighbourSpeeds.Dispose();
 
 	}
@@ -165,6 +165,7 @@ public class Flock : MonoBehaviour
 	private void GenerateUnits()
 	{
 		allUnits = new FlockUnit[flockSize];
+		flockUnitPrefab = avaliableflockUnitPrefabs[UnityEngine.Random.Range(0, avaliableflockUnitPrefabs.Length)];
 		for (int i = 0; i < flockSize; i++)
 		{
 			var randomVector = UnityEngine.Random.insideUnitSphere;
@@ -172,19 +173,20 @@ public class Flock : MonoBehaviour
 			var spawnPosition = transform.position + randomVector;
 			var rotation = Quaternion.Euler(0, UnityEngine.Random.Range(0, 360), 0);
 			allUnits[i] = Instantiate(flockUnitPrefab, spawnPosition, rotation);
+			allUnits[i].myTransform.localScale = Vector3.one * UnityEngine.Random.Range(0.7f, 1.3f);
 			allUnits[i].AssignFlock(this);
 			allUnits[i].InitializeSpeed(UnityEngine.Random.Range(minSpeed, maxSpeed));
 		}
 	}
 }
 
+
 [BurstCompile]
 public struct MoveJob : IJobParallelFor
 {
-	public NativeArray<Vector3> unitCurrentVelocities;
-
-	[NativeDisableParallelForRestriction]
 	public NativeArray<Vector3> unitForwardDirections;
+	public NativeArray<Vector3> currentVelocities;
+
 	[NativeDisableParallelForRestriction]
 	public NativeArray<Vector3> unitPositions;
 	[NativeDisableParallelForRestriction]
@@ -194,155 +196,167 @@ public struct MoveJob : IJobParallelFor
 	[NativeDisableParallelForRestriction]
 	public NativeArray<Vector3> aligementNeighbours;
 	[NativeDisableParallelForRestriction]
-	public NativeArray<Vector3> aligementNeighboursDirecions;
-	[NativeDisableParallelForRestriction]
 	public NativeArray<float> allUnitsSpeeds;
 	[NativeDisableParallelForRestriction]
 	public NativeArray<float> neighbourSpeeds;
 
 	public Vector3 flockPosition;
+	public Vector3 playerPosition;
+	public Vector3 randomDirection;
 	public float cohesionDistance;
-	public float avoidanceDistance;
 	public float aligementDistance;
+	public float avoidanceDistance;
 	public float boundsDistance;
 	public float obstacleDistance;
 	public float cohesionWeight;
-	public float avoidanceWeight;
 	public float aligementWeight;
+	public float avoidanceWeight;
 	public float boundsWeight;
 	public float obstacleWeight;
-	public float fovAngle;
+	public float angle;
 	public float minSpeed;
 	public float maxSpeed;
 	public float smoothDamp;
 	public float deltaTime;
 
-
 	public void Execute(int index)
 	{
-		//Find Neighbours
+
 		int cohesionIndex = 0;
 		int avoidanceIndex = 0;
-		int aligementIndex = 0;
+		int aligemetIndex = 0;
 		for (int i = 0; i < unitPositions.Length; i++)
 		{
-			Vector3 currentUnitPosition = unitPositions[index];
-			Vector3 currentNeighbourPosition = unitPositions[i];
-			Vector3 currentNeighbourDirection = unitForwardDirections[i];
-			if (currentUnitPosition != currentNeighbourPosition)
+			var currentUnitPos = unitPositions[i];
+			if (unitPositions[index] != currentUnitPos)
 			{
-				float currentDistanceToNeighbourSqr = Vector3.SqrMagnitude(currentUnitPosition - currentNeighbourPosition);
-				if (currentDistanceToNeighbourSqr < cohesionDistance * cohesionDistance)
+				float currentNeighbourDistanceSqr = Vector3.SqrMagnitude(unitPositions[index] - unitPositions[i]);
+				if (currentNeighbourDistanceSqr <= cohesionDistance * cohesionDistance)
 				{
-					cohesionNeighbours[cohesionIndex] = currentNeighbourPosition;
+					cohesionNeighbours[cohesionIndex] = currentUnitPos;
 					neighbourSpeeds[cohesionIndex] = allUnitsSpeeds[i];
 					cohesionIndex++;
 				}
-				if (currentDistanceToNeighbourSqr < avoidanceDistance * avoidanceDistance)
+				if (currentNeighbourDistanceSqr <= avoidanceDistance * avoidanceDistance)
 				{
-					avoidanceNeighbours[avoidanceIndex] = currentNeighbourPosition;
+					avoidanceNeighbours[avoidanceIndex] = currentUnitPos;
 					avoidanceIndex++;
 				}
-				if (currentDistanceToNeighbourSqr < aligementDistance * aligementDistance)
+				if (currentNeighbourDistanceSqr <= aligementDistance * aligementDistance)
 				{
-					aligementNeighbours[aligementIndex] = currentNeighbourPosition;
-					aligementNeighboursDirecions[aligementIndex] = currentNeighbourDirection;
-					aligementIndex++;
+					aligementNeighbours[aligemetIndex] = currentUnitPos;
+					aligemetIndex++;
 				}
 			}
 		}
-
-		//Calculate speed
-		float speed = 0f;
+		float speed = 0;
 		if (cohesionNeighbours.Length != 0)
 		{
+
 			for (int i = 0; i < cohesionNeighbours.Length; i++)
 			{
-				speed += neighbourSpeeds[i];				
+				if (neighbourSpeeds[i] != 0f)
+					speed += neighbourSpeeds[i];
 			}
+
 			speed /= cohesionNeighbours.Length;
-			
 		}
 		speed = Mathf.Clamp(speed, minSpeed, maxSpeed);
 
-		//Calculate cohesion
-		Vector3 cohesionVector = Vector3.zero;
+		var cohesionVector = Vector3.zero;
 		if (cohesionNeighbours.Length != 0)
 		{
-			int cohesionNeighbourdInFOV = 0;
+			int cohesionNeighboursInFOV = 0;
 			for (int i = 0; i <= cohesionIndex; i++)
 			{
-				if (IsInFov(unitForwardDirections[index], unitPositions[index], cohesionNeighbours[i], fovAngle) && cohesionNeighbours[i] != Vector3.zero)
+				if (IsInFOV(unitForwardDirections[index], unitPositions[index], cohesionNeighbours[i], angle) && (cohesionNeighbours[i] != Vector3.zero))
 				{
-					cohesionNeighbourdInFOV++;
+					cohesionNeighboursInFOV++;
 					cohesionVector += cohesionNeighbours[i];
 				}
 			}
-			cohesionVector /= cohesionNeighbourdInFOV;
+
+			cohesionVector /= cohesionNeighboursInFOV;
 			cohesionVector -= unitPositions[index];
 			cohesionVector = cohesionVector.normalized * cohesionWeight;
 		}
 
-		//Calculate avoidance
-		Vector3 avoidanceVector = Vector3.zero;
+
+		var avoidanceVector = Vector3.zero;
 		if (avoidanceNeighbours.Length != 0)
 		{
-			int avoidanceNeighbourdInFOV = 0;
+			int avoidanceNeighboursInFOV = 0;
 			for (int i = 0; i <= avoidanceIndex; i++)
 			{
-				if (IsInFov(unitForwardDirections[index], unitPositions[index], avoidanceNeighbours[i], fovAngle) && avoidanceNeighbours[i] != Vector3.zero)
+				if (IsInFOV(unitForwardDirections[index], unitPositions[index], avoidanceNeighbours[i], angle) && (avoidanceNeighbours[i] != Vector3.zero))
 				{
-					avoidanceNeighbourdInFOV++;
+					avoidanceNeighboursInFOV++;
 					avoidanceVector += (unitPositions[index] - avoidanceNeighbours[i]);
 				}
 			}
 
-			avoidanceVector /= avoidanceNeighbourdInFOV;
+			avoidanceVector /= avoidanceNeighboursInFOV;
 			avoidanceVector = avoidanceVector.normalized * avoidanceWeight;
 		}
 
-		//Calculate aligement
-		Vector3 aligementVector = Vector3.zero;
+		var aligementVector = Vector3.zero;
 		if (aligementNeighbours.Length != 0)
 		{
-			int aligementNeighbourdInFOV = 0;
-			for (int i = 0; i <= aligementIndex; i++)
+
+			int aligementNeighboursInFOV = 0;
+			for (int i = 0; i <= aligemetIndex; i++)
 			{
-				if (IsInFov(unitForwardDirections[index], unitPositions[index], aligementNeighbours[i], fovAngle) && aligementNeighbours[i] != Vector3.zero)
+				if (IsInFOV(unitForwardDirections[index], unitPositions[index], aligementNeighbours[i], angle) && (aligementNeighbours[i] != Vector3.zero))
 				{
-					aligementNeighbourdInFOV++;
-					aligementVector += aligementNeighboursDirecions[i].normalized;
+					aligementNeighboursInFOV++;
+					aligementVector += aligementNeighbours[i];
 				}
 			}
-			aligementVector /= aligementNeighbourdInFOV;
+
+			aligementVector /= aligementNeighboursInFOV;
 			aligementVector = aligementVector.normalized * aligementWeight;
 		}
 
-		//Calculate bounds
-		Vector3 offsetToCenter = flockPosition - unitPositions[index];
-		bool isNearBound = offsetToCenter.magnitude >= boundsDistance * 0.9f;
-		Vector3 boundsVector = isNearBound ? offsetToCenter.normalized : Vector3.zero;
+		var offsetToCenter = flockPosition - unitPositions[index];
+		bool isNearCenter = (offsetToCenter.magnitude >= boundsDistance * 0.9f);
+		var boundsVector = isNearCenter ? offsetToCenter.normalized : Vector3.zero;
 		boundsVector *= boundsWeight;
 
-		//Move Unit
-		Vector3 currentVelocity = unitCurrentVelocities[index];
-		Vector3 moveVector = cohesionVector + avoidanceVector + aligementVector + boundsVector;
+		var obstacleVector = Vector3.zero;
+		var offsetToPlayer = playerPosition - unitPositions[index];
+		if (Vector3.SqrMagnitude(offsetToPlayer) <= obstacleDistance * obstacleDistance)
+		{
+			offsetToPlayer = new Vector3(
+				offsetToPlayer.x + (index - unitPositions.Length / 2) / 30,
+				offsetToPlayer.y + (index - unitPositions.Length / 2) / 30,
+				offsetToPlayer.z + (index - unitPositions.Length / 2) / 30);
+			obstacleVector = -offsetToPlayer;
+			speed *= 3f;
+			
 
-		moveVector = Vector3.SmoothDamp(unitForwardDirections[index], moveVector, ref currentVelocity, smoothDamp, 10000, deltaTime);
+		}
+		obstacleVector = obstacleVector.normalized * obstacleWeight;
 
+		Vector3 currentVelocity = currentVelocities[index];
+		var moveVector = cohesionVector + avoidanceVector + aligementVector + boundsVector + obstacleVector;
+		//moveVector = Vector3.SmoothDamp(unitForwardDirections[index], moveVector, ref currentVelocity, smoothDamp, 100000, deltaTime);
+		moveVector = Vector3.RotateTowards(unitForwardDirections[index], moveVector, 1f * deltaTime, 0f);
 		moveVector = moveVector.normalized * speed;
-		if(moveVector == Vector3.zero)
+		if (moveVector == Vector3.zero)
 		{
 			moveVector = unitForwardDirections[index];
 		}
 		unitPositions[index] = unitPositions[index] + moveVector * deltaTime;
 		unitForwardDirections[index] = moveVector.normalized;
 		allUnitsSpeeds[index] = speed;
-		unitCurrentVelocities[index] = currentVelocity;
-
+		currentVelocities[index] = currentVelocity;
 
 	}
-	private bool IsInFov(Vector3 forward, Vector3 unitPosition, Vector3 targetPosition, float angle)
+
+
+
+
+	private bool IsInFOV(Vector3 forward, Vector3 unitPosition, Vector3 targetPosition, float angle)
 	{
 		return Vector3.Angle(forward, targetPosition - unitPosition) <= angle;
 	}

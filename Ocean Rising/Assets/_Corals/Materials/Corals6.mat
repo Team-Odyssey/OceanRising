@@ -56,6 +56,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 293aaaacce4cd7d43bcc9211b2202f07, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _GlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _HeightMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -84,6 +88,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ShadowOffset:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SmoothnessMap:
         m_Texture: {fileID: 2800000, guid: 1ce42bacd82685d44b327d610832c979, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -92,12 +100,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TranslucencyMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AO: 2.4
     - _AlphaClip: 1
+    - _BaseLight: 0.35
     - _Blend: 0
     - _BumpScale: 1
     - _Cull: 0
@@ -114,17 +128,20 @@ Material:
     - _Metallic: 0.14
     - _Mode: 0
     - _NormalMapDepth: 1
+    - _Occlusion: 7.5
     - _OcclusionStrength: 1
     - _ParalaxOffset: 0.001
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Shininess: 0.078125
     - _SmoothFromMapSwitch: 1
     - _SmoothRough: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _Snoothness: 1
     - _SpecularHighlights: 1
+    - _SquashAmount: 1
     - _SrcBlend: 1
     - _Surface: 0
     - _Tiling: 1
@@ -141,6 +158,8 @@ Material:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TransmissionColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0}
+    - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &8870421007151606433
 MonoBehaviour:
   m_ObjectHideFlags: 11
