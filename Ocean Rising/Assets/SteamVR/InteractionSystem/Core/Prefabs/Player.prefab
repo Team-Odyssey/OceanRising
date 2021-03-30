@@ -325,7 +325,7 @@ MonoBehaviour:
   swimmingForce: 6
   resistanceForce: 1
   deadZone: 0.5
-  trackingSpace: {fileID: 429506}
+  trackingSpace: {fileID: 447954}
   rightHandTrigger:
     actionPath: /actions/default/in/RightTrigger
     needsReinit: 0

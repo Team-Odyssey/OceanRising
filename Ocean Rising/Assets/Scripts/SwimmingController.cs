@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
@@ -43,7 +44,6 @@ public class SwimmingController : MonoBehaviour
             Vector3 rightHandDirection = rightHandPose.velocity;
             
             Vector3 localVelocity = leftHandDirection + rightHandDirection;
-            Debug.Log("localVelocity: " + localVelocity);
             localVelocity *= -1f;
             var squaredDeadzone = deadZone * deadZone;
             if (localVelocity.sqrMagnitude > squaredDeadzone && currentWaitTime > interval)
@@ -69,7 +69,7 @@ public class SwimmingController : MonoBehaviour
 
     private void AddSwimmingForce(Vector3 localVelocity)
     {
-        Vector3 worldSpaceVelocity = trackingSpace.TransformDirection(localVelocity);
+        Vector3 worldSpaceVelocity = trackingSpace.TransformDirection(localVelocity); // transforms from world space to local space
         rigidbody.AddForce(worldSpaceVelocity * swimmingForce, ForceMode.Acceleration);
         currentDirection = worldSpaceVelocity.normalized;
     }
