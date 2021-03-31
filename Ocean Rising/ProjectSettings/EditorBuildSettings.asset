@@ -7,7 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
     path: Assets/Scenes/paulsscene.unity
+=======
+    path: Assets/Scenes/SampleScene.unity
+>>>>>>> parent of e162180 (changed name for merge)
 =======
     path: Assets/Scenes/SampleScene.unity
 >>>>>>> parent of e162180 (changed name for merge)
