@@ -12010,7 +12010,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1021375633}
   avaliableflockUnitPrefabs:
-  - {fileID: 2759292558238443528, guid: 38902ef207306724b84a298d7190e567, type: 3}
+  - {fileID: 4402445250271522591, guid: 76dd140b0450ec94286cf8da50ce91b1, type: 3}
+  - {fileID: 1919707690912458583, guid: 49c3a66625d5cb24c952be4f9c973cf2, type: 3}
+  - {fileID: 1424797937492678579, guid: 54a7226873aeac74cb0670f68d79cb14, type: 3}
+  - {fileID: 2300882557195055032, guid: 12493c75b01f36141ac9622650348cbe, type: 3}
+  - {fileID: 6089099952060281851, guid: 4e932f4f0062eb746955983e390f006b, type: 3}
+  - {fileID: 1315167308267885349, guid: 1ba6606ad9acba34fad286d53f8d98ca, type: 3}
+  - {fileID: 5593402422000195320, guid: 8720a086f26d8f94a96aadf6bfc36875, type: 3}
+  - {fileID: 6117733834128178251, guid: 8e8c7dadb8b04994c94c78a9c0100ead, type: 3}
+  - {fileID: 191180131478955877, guid: 2f32e1cbbbcd8284e81a76a9ca2da4d2, type: 3}
+  - {fileID: 2646889250578503402, guid: 8805ab17938ebd941b0495b07438d560, type: 3}
   flockSize: 100
   spawnBounds: {x: 3, y: 3, z: 3}
   _minSpeed: 2
