@@ -11,9 +11,6 @@ public class Spawner : MonoBehaviour
     public float spawnLeastWait;
     public int startWait;
     public bool stop;
-    public int min = 3;
-    public int max = 10;
-    public int numFood = 0;
 
     int randFood;
 
@@ -33,18 +30,12 @@ public class Spawner : MonoBehaviour
 
         while (!stop)
         {
-            if (numFood < max)
-            {
-                randFood = Random.Range(0, 2); //Randomly choose 1 of 2 possible foods
+            randFood = Random.Range(0, 2); //Randomly choose 1 of 2 possible foods
 
-                Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), Random.Range(-spawnValues.y, spawnValues.y), Random.Range(-spawnValues.z, spawnValues.z));
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), Random.Range(-spawnValues.y, spawnValues.y), Random.Range(-spawnValues.z, spawnValues.z));
 
 
-                Instantiate(food[randFood], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation); //Spawn object at given location
-
-                numFood += 1;
-                Debug.Log("numFood = " + numFood + " of max " + max);
-            }
+            Instantiate(food[randFood], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation); //Spawn object at given location
 
             yield return new WaitForSeconds(spawnWait);
         }
