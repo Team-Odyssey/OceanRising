@@ -8,7 +8,7 @@ public class HealthLevel : MonoBehaviour
     public Slider healthSlider;
 
     public float MaxHealth;
-    public static float currentHealth;
+    public float currentHealth;
 
     private bool stopTimer;
     void Start()

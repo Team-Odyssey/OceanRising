@@ -631,7 +631,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 68415956}
-  - component: {fileID: 68415955}
   m_Layer: 0
   m_Name: HealthLevelControl
   m_TagString: Untagged
@@ -639,20 +638,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &68415955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 68415954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd5aaf9f816f323478c7091c4ad9ea96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSlider: {fileID: 981148982}
-  MaxHealth: 60
 --- !u!4 &68415956
 Transform:
   m_ObjectHideFlags: 0
@@ -9499,9 +9484,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 925760818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25a2d61eb6335f34c9e4f472e07495aa, type: 3}
+  m_Script: {fileID: 11500000, guid: cd5aaf9f816f323478c7091c4ad9ea96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthSlider: {fileID: 981148982}
+  MaxHealth: 60
+  currentHealth: 60
 --- !u!1001 &928051959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13688,7 +13676,6 @@ GameObject:
   - component: {fileID: 1328601480}
   - component: {fileID: 1328601479}
   - component: {fileID: 1328601482}
-  - component: {fileID: 1328601483}
   m_Layer: 0
   m_Name: TestFood
   m_TagString: TestFood
@@ -13787,18 +13774,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1328601483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328601477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25a2d61eb6335f34c9e4f472e07495aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1335306523
 GameObject:
   m_ObjectHideFlags: 0
@@ -16611,6 +16586,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1301714131}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1597189948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 101548, guid: dc06161b6d97feb419f45f03b62e14b9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1064113600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1597189950
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597189948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1597189951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597189948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a2d61eb6335f34c9e4f472e07495aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthLevel: {fileID: 925760820}
 --- !u!4 &1605012371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4436026789128507722, guid: ea54f979389e30d4c8ee281103b05458,
