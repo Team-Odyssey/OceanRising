@@ -101,14 +101,16 @@ public class Flock : MonoBehaviour
 		NativeArray<float> neighbourSpeeds = new NativeArray<float>(allUnits.Length, Allocator.TempJob);
 		for (int i = 0; i < allUnits.Length; i++)
 		{
-			unitForwardDirections[i] = allUnits[i].myTransform.forward;
-			unitPositions[i] = allUnits[i].myTransform.position;
-			currentVelocities[i] = allUnits[i].currentVelocity;
-			cohesionNeighbours[i] = Vector3.zero;
-			avoidanceNeighbours[i] = Vector3.zero;
-			aligementNeighbours[i] = Vector3.zero;
-			allUnitsSpeeds[i] = allUnits[i].speed;
-			neighbourSpeeds[i] = 0f;
+			if(allUnits[i] != null){ 
+				unitForwardDirections[i] = allUnits[i].myTransform.forward;
+				unitPositions[i] = allUnits[i].myTransform.position;
+				currentVelocities[i] = allUnits[i].currentVelocity;
+				cohesionNeighbours[i] = Vector3.zero;
+				avoidanceNeighbours[i] = Vector3.zero;
+				aligementNeighbours[i] = Vector3.zero;
+				allUnitsSpeeds[i] = allUnits[i].speed;
+				neighbourSpeeds[i] = 0f;
+			}
 
 		}
 		MoveJob moveJob = new MoveJob
@@ -146,10 +148,13 @@ public class Flock : MonoBehaviour
 
 		for (int i = 0; i < allUnits.Length; i++)
 		{
-			allUnits[i].myTransform.forward = unitForwardDirections[i];
-			allUnits[i].myTransform.position = unitPositions[i];
-			allUnits[i].currentVelocity = currentVelocities[i];
-			allUnits[i].speed = allUnitsSpeeds[i];
+			if(allUnits[i] != null){ 
+				allUnits[i].myTransform.forward = unitForwardDirections[i];
+				allUnits[i].myTransform.position = unitPositions[i];
+				allUnits[i].currentVelocity = currentVelocities[i];
+				allUnits[i].speed = allUnitsSpeeds[i];
+			}
+			
 		}
 		unitForwardDirections.Dispose();
 		unitPositions.Dispose();

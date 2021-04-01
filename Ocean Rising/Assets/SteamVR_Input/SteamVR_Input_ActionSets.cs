@@ -25,8 +25,6 @@ namespace Valve.VR
         
         private static SteamVR_Input_ActionSet_mixedreality p_mixedreality;
         
-        
-        
         public static SteamVR_Input_ActionSet_default _default
         {
             get
@@ -58,7 +56,6 @@ namespace Valve.VR
                 return SteamVR_Actions.p_mixedreality.GetCopy<SteamVR_Input_ActionSet_mixedreality>();
             }
         }
-        
         
         private static void StartPreInitActionSets()
         {
