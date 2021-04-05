@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{7baa10e5-cf17-4867-bcdc-28768d8f047a}">
+		<property name="assetPath">
+			<value>Bubbles SOUND EFFECT - Bubble SOUNDS Blasen Blubberblasen Blubbern Bubbling SFX.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>109.4530612244898</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{802ab57f-755d-4211-980a-29d7b7b70cad}</destination>
+		</relationship>
+	</object>
+</objects>
