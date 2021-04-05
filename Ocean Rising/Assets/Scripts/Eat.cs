@@ -12,9 +12,9 @@ public class Eat : MonoBehaviour
     {
         if (other.gameObject.tag.Equals( "TestFood"))
         {
-            //healthLevel.Update();
-            healthLevel.currentHealth += 10f;
-            //healthLevel.healthSlider.value = 60f;
+
+            healthLevel.AddHealth(100f);
+
             count += 1;
             Debug.Log(count);
             Destroy(other.gameObject);
