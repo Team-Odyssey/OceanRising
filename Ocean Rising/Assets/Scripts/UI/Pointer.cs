@@ -6,13 +6,15 @@ public class Pointer : MonoBehaviour
 {
     public float m_DefaultLength = 5.0f;
     public GameObject m_Dot;
-    public VRI m_InputModule;
+    public VRInput m_InputModule;
 
     private LineRenderer m_LineRenderer = null;
+    // Start is called before the first frame update
     private void Awake()
     {
         m_LineRenderer = GetComponent<LineRenderer>();
     }
+
     // Update is called once per frame
     private void Update()
     {
@@ -22,13 +24,11 @@ public class Pointer : MonoBehaviour
     private void UpdateLine()
     {
         float targetLength = m_DefaultLength;
-
         RaycastHit hit = CreateRaycast(targetLength);
-        
         Vector3 endPosition = transform.position + (transform.forward * targetLength);
+    if(hit.collider != null)
+        endPosition = hit.point;
 
-        if(hit.collider != null)
-            endPosition = hit.point;
         m_Dot.transform.position = endPosition;
 
         m_LineRenderer.SetPosition(0, transform.position);
@@ -43,4 +43,5 @@ public class Pointer : MonoBehaviour
 
         return hit;
     }
+
 }
