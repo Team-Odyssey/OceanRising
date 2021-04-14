@@ -5,9 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/Environment.unity
+    guid: fc59f264d70c7574287185ad866cb394
+  - enabled: 1
+    path: Assets/Scenes/OceanScene.unity
+    guid: da9ca87f9aff2584db5ac048f08966b7
+  - enabled: 1
+    path: Assets/Scenes/Predator.unity
+    guid: ae1500c2d855494489bd3fcb59a63e64
+  - enabled: 1
+    path: Assets/Scenes/Singleplayer.unity
+    guid: 8e162ede3bc1ad14885c77ef28ae429e
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer.unity
+    guid: ae304698ca88f734894eed25fe6675a2
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: f7632fd79cc39214a9614abc00a89b47,
       type: 2}
