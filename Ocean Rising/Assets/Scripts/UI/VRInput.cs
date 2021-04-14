@@ -53,11 +53,26 @@ public class VRInput : BaseInputModule
 
     private void ProcessPress(PointerEventData data)
     {
-
+        data.pointerPressRaycast = data.pointerCurrentRaycast;
+        GameObject newPointerPressed = ExecuteEvents.ExecuteHierarchy(m_CurrentObject, data, ExecuteEvents.pointerDownHandler);
+        if(newPointerPressed == null){ 
+            newPointerPressed = ExecuteEvents.GetEventHandler<IPointerClickHandler>(m_CurrentObject);
+        }
+        data.pressPosition = data.position;
+        data.pointerPress = newPointerPressed;
+        data.rawPointerPress = m_CurrentObject;
     }
 
     private void ProcessRelease(PointerEventData data)
     {
-
+        ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
+        GameObject pointerUpHandler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(m_CurrentObject);
+        if(data.pointerPress == pointerUpHandler){
+            ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerClickHandler);
+        }
+        eventSystem.SetSelectedGameObject(null);
+        data.pressPosition = Vector2.zero;
+        data.pointerPress = null;
+        data.rawPointerPress = null;
     }
 }
