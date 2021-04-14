@@ -5,26 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Menus/Title Screen.unity
-    guid: 161b59392cb21df4a84b9d81fe6025aa
-  - enabled: 1
-    path: Assets/Scenes/Menus/Login Screen 1.unity
-    guid: 85fa4810960d4c54991fa0339908a690
-  - enabled: 1
-    path: Assets/Scenes/Menus/Register Screen.unity
-    guid: b66f760dbf2c59c409e781f1cc08e87b
-  - enabled: 1
-    path: Assets/Scenes/Singleplayer.unity
-    guid: 8e162ede3bc1ad14885c77ef28ae429e
-  - enabled: 1
-    path: Assets/Scenes/Multiplayer.unity
-    guid: ae304698ca88f734894eed25fe6675a2
-  - enabled: 1
-    path: Assets/Scenes/Predator.unity
-    guid: ae1500c2d855494489bd3fcb59a63e64
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: f7632fd79cc39214a9614abc00a89b47,
+      type: 2}
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 8145eecb1e174d042a4c3d0067b35e0c,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6581866d372310c468aa1e3ab0736d2d,
       type: 2}
