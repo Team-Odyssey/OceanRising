@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: -8156925142492347509}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637540203431313812
+  lastModified: 637540233193898322
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   - {fileID: -8156925142492347509}
   StringsBanks:
   - {fileID: 1073235303270004162}
-  stringsBankWriteTime: 637540203431313812
+  stringsBankWriteTime: 637540233193908280
   cacheVersion: 6
 --- !u!114 &613526210839660711
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637540203431313812
+  lastModified: 637540233193908280
   LoadResult: 0
   FileSizes:
   - Name: Desktop
