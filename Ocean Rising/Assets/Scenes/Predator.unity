@@ -10830,27 +10830,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27bfdb9a40efac94b969eaf77cea92d9, type: 3}
---- !u!1 &566026071 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5339355619053426210, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
-    type: 3}
-  m_PrefabInstance: {fileID: 685356516}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &566026073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566026071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b56f1904701a7e84288d1685b4bc4fe5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1064113604}
-  sightRange: 100
-  attackRange: 3
 --- !u!1001 &567111433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13351,27 +13330,27 @@ PrefabInstance:
     - target: {fileID: 2210963481323279187, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2210963481323279187, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2210963481323279187, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2210963481323279187, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2210963481323279187, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2210963481323279187, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
         type: 3}
@@ -13381,7 +13360,7 @@ PrefabInstance:
     - target: {fileID: 2210963481323279187, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 2210963481323279187, guid: 087a2ac1c75bbc34aa1d66d7766c1d5b,
         type: 3}
@@ -13431,6 +13410,21 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: -1}
+--- !u!114 &685356522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685356517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b56f1904701a7e84288d1685b4bc4fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1064113604}
+  sightRange: 100
+  attackRange: 3
 --- !u!1001 &689720117
 PrefabInstance:
   m_ObjectHideFlags: 0
