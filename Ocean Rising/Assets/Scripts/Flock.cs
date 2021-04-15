@@ -10,6 +10,10 @@ using Unity.Burst;
 public class Flock : MonoBehaviour
 {
 	[SerializeField] Transform playerTransform;
+	Transform predatorTransform;
+
+	//
+	//Transform predator;
 
 	[Header("Spawn Setup")]
 	[SerializeField] private FlockUnit[] avaliableflockUnitPrefabs;
@@ -26,6 +30,16 @@ public class Flock : MonoBehaviour
 
 
 	[Header("Detection Distances")]
+
+	//
+
+	/*[Range(0, 10)]
+	[SerializeField] private float _predatorCohesionDistance;
+	public float predatorCohesionDistance { get { return _predatorCohesionDistance; } }
+
+	[Range(0, 10)]
+	[SerializeField] private float _predatorAvoidanceDistance;
+	public float predatorAvoidanceDistance { get { return _predatorAvoidanceDistance; } }*/
 
 	[Range(0, 10)]
 	[SerializeField] private float _cohesionDistance;
@@ -77,6 +91,7 @@ public class Flock : MonoBehaviour
 	{
 		SetRandomValues();
 		GenerateUnits();
+		predatorTransform = GameObject.FindGameObjectWithTag("Predator").transform;
 	}
 
 	private void SetRandomValues()
@@ -99,6 +114,11 @@ public class Flock : MonoBehaviour
 		NativeArray<Vector3> aligementNeighbours = new NativeArray<Vector3>(allUnits.Length, Allocator.TempJob);
 		NativeArray<float> allUnitsSpeeds = new NativeArray<float>(allUnits.Length, Allocator.TempJob);
 		NativeArray<float> neighbourSpeeds = new NativeArray<float>(allUnits.Length, Allocator.TempJob);
+
+		//
+		//var predatorPosition = predator.transform.position;
+		//Debug.Log(predatorPosition);
+
 		for (int i = 0; i < allUnits.Length; i++)
 		{
 			if(allUnits[i] != null){ 
@@ -121,8 +141,12 @@ public class Flock : MonoBehaviour
 			allUnitsSpeeds = allUnitsSpeeds,
 			flockPosition = transform.position,
 			cohesionDistance = cohesionDistance,
+			//
+			//predatorCohesionDistance = predatorCohesionDistance,
 			aligementDistance = aligementDistance,
 			avoidanceDistance = avoidanceDistance,
+			//
+			//predatorAvoidanceDistance = predatorAvoidanceDistance,
 			obstacleDistance = obstacleDistance,
 			boundsDistance = boundsDistance,
 			cohesionWeight = cohesionWeight,
@@ -140,6 +164,7 @@ public class Flock : MonoBehaviour
 			aligementNeighbours = aligementNeighbours,
 			neighbourSpeeds = neighbourSpeeds,
 			playerPosition = playerTransform.position,
+			predatorPosition = predatorTransform.position,
 			randomDirection = UnityEngine.Random.insideUnitSphere
 		};
 
@@ -207,10 +232,15 @@ public struct MoveJob : IJobParallelFor
 
 	public Vector3 flockPosition;
 	public Vector3 playerPosition;
+	public Vector3 predatorPosition;
 	public Vector3 randomDirection;
 	public float cohesionDistance;
+	//
+	//public float predatorCohesionDistance;
 	public float aligementDistance;
 	public float avoidanceDistance;
+	//
+	//public float predatorAvoidanceDistance;
 	public float boundsDistance;
 	public float obstacleDistance;
 	public float cohesionWeight;
@@ -223,19 +253,25 @@ public struct MoveJob : IJobParallelFor
 	public float maxSpeed;
 	public float smoothDamp;
 	public float deltaTime;
+	//public float predatorPosition;
+	//public Transform predator;
 
 	public void Execute(int index)
 	{
 
+
 		int cohesionIndex = 0;
 		int avoidanceIndex = 0;
 		int aligemetIndex = 0;
+
+
 		for (int i = 0; i < unitPositions.Length; i++)
 		{
 			var currentUnitPos = unitPositions[i];
 			if (unitPositions[index] != currentUnitPos)
 			{
 				float currentNeighbourDistanceSqr = Vector3.SqrMagnitude(unitPositions[index] - unitPositions[i]);
+				
 				if (currentNeighbourDistanceSqr <= cohesionDistance * cohesionDistance)
 				{
 					cohesionNeighbours[cohesionIndex] = currentUnitPos;
@@ -247,6 +283,8 @@ public struct MoveJob : IJobParallelFor
 					avoidanceNeighbours[avoidanceIndex] = currentUnitPos;
 					avoidanceIndex++;
 				}
+				 
+
 				if (currentNeighbourDistanceSqr <= aligementDistance * aligementDistance)
 				{
 					aligementNeighbours[aligemetIndex] = currentUnitPos;
@@ -329,6 +367,7 @@ public struct MoveJob : IJobParallelFor
 
 		var obstacleVector = Vector3.zero;
 		var offsetToPlayer = playerPosition - unitPositions[index];
+		var offsetToPredator = predatorPosition - unitPositions[index];
 		if (Vector3.SqrMagnitude(offsetToPlayer) <= obstacleDistance * obstacleDistance)
 		{
 			offsetToPlayer = new Vector3(
@@ -340,6 +379,19 @@ public struct MoveJob : IJobParallelFor
 			
 
 		}
+
+		if (Vector3.SqrMagnitude(offsetToPredator) <= obstacleDistance * obstacleDistance)
+		{
+			offsetToPredator = new Vector3(
+				offsetToPredator.x + (index - unitPositions.Length / 2) / 30,
+				offsetToPredator.y + (index - unitPositions.Length / 2) / 30,
+				offsetToPredator.z + (index - unitPositions.Length / 2) / 30);
+			obstacleVector = -offsetToPredator;
+			speed *= 3f;
+			//Debug.Log("avoided!");
+
+		}
+
 		obstacleVector = obstacleVector.normalized * obstacleWeight;
 
 		Vector3 currentVelocity = currentVelocities[index];

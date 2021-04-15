@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Eat : MonoBehaviour
 {
     public HealthLevel healthLevel;
+    public PowerUp powerLevel;
     public int count = 0;
     
     void OnTriggerEnter(Collider other)
@@ -14,9 +15,9 @@ public class Eat : MonoBehaviour
         {
 
             healthLevel.AddHealth(100f);
+            powerLevel.AddPower(1f);
 
             count += 1;
-            Debug.Log(count);
             Destroy(other.gameObject);
         }
     }

@@ -1,6 +1,167 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8156925142492347509
+--- !u!114 &-9044762885741936962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Music/UpBeat
+  m_EditorClassIdentifier: 
+  Path: event:/3D Music/UpBeat
+  guid: 9ff6fbb546d42441914c0fb091e502d1
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34899
+--- !u!114 &-8230816043186776598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Predator
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Predator
+  guid: dc9821f24d43244dbab1a652ea53c7b1
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 37330
+--- !u!114 &-7555345147137825619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Music/Cave
+  m_EditorClassIdentifier: 
+  Path: event:/3D Music/Cave
+  guid: 8b1c1180953a634690ffb766040ac510
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42213
+--- !u!114 &-6529934807746414934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Music/MainTheme
+  m_EditorClassIdentifier: 
+  Path: event:/3D Music/MainTheme
+  guid: 0ab846cfffe0724ab8adb14828762fe7
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 59376
+--- !u!114 &-5638630038488190741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/DeeoOcean
+  m_EditorClassIdentifier: 
+  Path: event:/Music/DeeoOcean
+  guid: 87bcc0a949f2934289e076a6153d8373
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 42213
+--- !u!114 &-4644974393901363535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Music/Predator
+  m_EditorClassIdentifier: 
+  Path: event:/3D Music/Predator
+  guid: 8c5cd71b8fac02448e77164793b910c1
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 37330
+--- !u!114 &-3041196555761211642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/UpBeat
+  m_EditorClassIdentifier: 
+  Path: event:/Music/UpBeat
+  guid: 0b387e71260b9a4381b7abe84e794429
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 34899
+--- !u!114 &-352912519289240259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15,7 +176,7 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637532236657689942
+  lastModified: 637540456307220964
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -32,19 +193,26 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1073235303270004162}
-  - {fileID: -8156925142492347509}
+  - {fileID: 2840560862478694316}
+  - {fileID: -352912519289240259}
   EditorEvents:
-  - {fileID: 5032075858161322378}
-  - {fileID: 3191864925393602211}
+  - {fileID: -3041196555761211642}
+  - {fileID: 8631504115584181521}
+  - {fileID: 7416530154022556959}
+  - {fileID: -5638630038488190741}
+  - {fileID: -8230816043186776598}
+  - {fileID: -6529934807746414934}
+  - {fileID: -7555345147137825619}
+  - {fileID: -4644974393901363535}
+  - {fileID: -9044762885741936962}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8156925142492347509}
+  - {fileID: -352912519289240259}
   StringsBanks:
-  - {fileID: 1073235303270004162}
-  stringsBankWriteTime: 637532236657689942
+  - {fileID: 2840560862478694316}
+  stringsBankWriteTime: 637540456307230965
   cacheVersion: 6
---- !u!114 &1073235303270004162
+--- !u!114 &2840560862478694316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,13 +227,13 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637532236657689942
+  lastModified: 637540456307230965
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 798
+    Value: 1104
   Exists: 1
---- !u!114 &3191864925393602211
+--- !u!114 &7416530154022556959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,12 +243,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/EatSmall
+  m_Name: event:/Music/OceanTheme
   m_EditorClassIdentifier: 
-  Path: event:/EatSmall
+  Path: event:/Music/OceanTheme
+  guid: 76b4e71ab0c7054fbee19196aeba288c
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 59376
+--- !u!114 &8631504115584181521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/EatSmall
+  m_EditorClassIdentifier: 
+  Path: event:/Music/EatSmall
   guid: 40b1fbfcb0c67e4eaeb74f9eda4f1735
   Banks:
-  - {fileID: -8156925142492347509}
+  - {fileID: -352912519289240259}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -88,26 +279,3 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1000
---- !u!114 &5032075858161322378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/OceanTheme
-  m_EditorClassIdentifier: 
-  Path: event:/OceanTheme
-  guid: 76b4e71ab0c7054fbee19196aeba288c
-  Banks:
-  - {fileID: -8156925142492347509}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 59376

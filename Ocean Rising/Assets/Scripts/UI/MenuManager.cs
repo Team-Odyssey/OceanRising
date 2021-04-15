@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public Panel currentPanel = null;
+    public Panel currentPanel;
     private List<Panel> panelHistory = new List<Panel>();
 
     private void Start(){
@@ -35,5 +36,12 @@ public class MenuManager : MonoBehaviour
         currentPanel.Hide();
         currentPanel = newPanel;
         currentPanel.Show();
+    }
+    public void doExitGame() {
+     Application.Quit();
+    }
+    
+    public void sceneTransition(string newScene){ 
+        SceneManager.LoadScene(newScene);
     }
 }
