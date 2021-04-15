@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Music/EatSmall
   m_EditorClassIdentifier: 
+
   Path: event:/Music/EatSmall
   guid: 40b1fbfcb0c67e4eaeb74f9eda4f1735
   Banks:
@@ -70,8 +71,10 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: 204159656862352025}
   StringsBanks:
+
   - {fileID: 162159357133517698}
   stringsBankWriteTime: 637540306821238050
+
   cacheVersion: 6
 --- !u!114 &162159357133517698
 MonoBehaviour:
@@ -88,7 +91,9 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+
   lastModified: 637540306821238050
+
   LoadResult: 0
   FileSizes:
   - Name: Desktop
