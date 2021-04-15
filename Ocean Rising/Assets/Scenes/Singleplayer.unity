@@ -34149,7 +34149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_TagString
-      value: Predator
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 429506, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34177,15 +34177,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.81
+      value: -3.84
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.388
+      value: 36.01
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 135.01
+      value: 141.27
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -45764,6 +45764,35 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 523651554}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1402977092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5826118201137868251, guid: ea54f979389e30d4c8ee281103b05458,
+    type: 3}
+  m_PrefabInstance: {fileID: 1620944459}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1402977096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402977092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/3D Music/MainTheme
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1405862156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47441,35 +47470,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff9a1359999b2914bb4d6bae48ca1814, type: 3}
---- !u!1 &1463446052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5855920676769770191, guid: ef43868c13617d34eb08265885ce3799,
-    type: 3}
-  m_PrefabInstance: {fileID: 1789606394}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1463446053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463446052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/3D Music/MainTheme
-  PlayEvent: 1
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1001 &1467610800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52079,7 +52079,7 @@ PrefabInstance:
     - target: {fileID: 4436026789128507722, guid: ea54f979389e30d4c8ee281103b05458,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.384657
+      value: 7.05
       objectReference: {fileID: 0}
     - target: {fileID: 4436026789128507722, guid: ea54f979389e30d4c8ee281103b05458,
         type: 3}
@@ -52089,7 +52089,7 @@ PrefabInstance:
     - target: {fileID: 4436026789128507722, guid: ea54f979389e30d4c8ee281103b05458,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.493042
+      value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: 4436026789128507722, guid: ea54f979389e30d4c8ee281103b05458,
         type: 3}
@@ -56152,6 +56152,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1759791355}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1762171629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1762171630}
+  - component: {fileID: 1762171631}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1762171630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762171629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.881, y: 18.706, z: 137.575}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762171631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762171629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/3D Music/Cave
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1763166118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7194924788985401184, guid: f65e1ff336a0c7b4b949324b65dd7654,
@@ -60824,6 +60878,34 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!136 &1919475898
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919475894}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.5
+  m_Height: 5
+  m_Direction: 1
+  m_Center: {x: -0.5, y: 0.8, z: 0}
+--- !u!114 &1919475899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919475894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc9b4c0cac904f43b02b2c22979de4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1064113606}
+  respawnPoint: {fileID: 1762171630}
 --- !u!4 &1921209251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4298327339736888568, guid: ef43868c13617d34eb08265885ce3799,
@@ -67914,10 +67996,23 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1064113604}
+    - target: {fileID: 685356519, guid: a6e852c0aa2831146bc717d287a094dc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 685356519, guid: a6e852c0aa2831146bc717d287a094dc, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4751213426956085443, guid: a6e852c0aa2831146bc717d287a094dc,
         type: 3}
       propertyPath: m_Name
       value: humpback_whale_model23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879349082913860784, guid: a6e852c0aa2831146bc717d287a094dc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8625777196723493584, guid: a6e852c0aa2831146bc717d287a094dc,
         type: 3}
@@ -67974,5 +68069,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 85.61201
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 685356521, guid: a6e852c0aa2831146bc717d287a094dc, type: 3}
+    - {fileID: 685356519, guid: a6e852c0aa2831146bc717d287a094dc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a6e852c0aa2831146bc717d287a094dc, type: 3}
