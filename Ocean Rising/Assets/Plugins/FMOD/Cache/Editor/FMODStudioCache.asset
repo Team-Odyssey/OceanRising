@@ -176,7 +176,7 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637540456307220964
+  lastModified: 637540815456472645
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -205,12 +205,13 @@ MonoBehaviour:
   - {fileID: -7555345147137825619}
   - {fileID: -4644974393901363535}
   - {fileID: -9044762885741936962}
+  - {fileID: 6614701010361600528}
   EditorParameters: []
   MasterBanks:
   - {fileID: -352912519289240259}
   StringsBanks:
   - {fileID: 2840560862478694316}
-  stringsBankWriteTime: 637540456307230965
+  stringsBankWriteTime: 637540815456482640
   cacheVersion: 6
 --- !u!114 &2840560862478694316
 MonoBehaviour:
@@ -227,12 +228,35 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637540456307230965
+  lastModified: 637540815456482640
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1104
+    Value: 1138
   Exists: 1
+--- !u!114 &6614701010361600528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Music/Eat
+  m_EditorClassIdentifier: 
+  Path: event:/3D Music/Eat
+  guid: fec74412e43d7f4284100305abacc5b2
+  Banks:
+  - {fileID: -352912519289240259}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &7416530154022556959
 MonoBehaviour:
   m_ObjectHideFlags: 0
