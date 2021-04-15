@@ -38,7 +38,11 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 637540233193898322
+=======
+  lastModified: 637540211967658162
+>>>>>>> 3be737659b360170c17d70210c6cf11da5e629c9
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -90,7 +94,11 @@ MonoBehaviour:
   - {fileID: -8156925142492347509}
   StringsBanks:
   - {fileID: 1073235303270004162}
+<<<<<<< HEAD
   stringsBankWriteTime: 637540233193908280
+=======
+  stringsBankWriteTime: 637540211967668176
+>>>>>>> 3be737659b360170c17d70210c6cf11da5e629c9
   cacheVersion: 6
 --- !u!114 &613526210839660711
 MonoBehaviour:
@@ -153,7 +161,11 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 637540233193908280
+=======
+  lastModified: 637540211967668176
+>>>>>>> 3be737659b360170c17d70210c6cf11da5e629c9
   LoadResult: 0
   FileSizes:
   - Name: Desktop

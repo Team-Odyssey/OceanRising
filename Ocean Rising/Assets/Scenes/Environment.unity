@@ -799,7 +799,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de11953065e6f3847acd48a1a2c3e393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   NewLevel: Environment
+=======
+  NewLevel: Tutorial
+>>>>>>> 3be737659b360170c17d70210c6cf11da5e629c9
 --- !u!65 &955201385
 BoxCollider:
   m_ObjectHideFlags: 0
