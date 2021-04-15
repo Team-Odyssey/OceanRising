@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    public string NewLevel= "Environment";
+    public string NewLevel= "Environment M";
     void OnTriggerEnter(Collider other)
     {
         SceneManager.LoadScene(NewLevel);
