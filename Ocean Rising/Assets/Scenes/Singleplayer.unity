@@ -62091,9 +62091,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
-  OverrideAttenuation: 0
+  OverrideAttenuation: 1
   OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMaxDistance: 30
 --- !u!136 &1919475898
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -70679,6 +70679,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1064087658}
+    - target: {fileID: 566026073, guid: a6e852c0aa2831146bc717d287a094dc, type: 3}
+      propertyPath: sightRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 566026073, guid: a6e852c0aa2831146bc717d287a094dc, type: 3}
+      propertyPath: attackRange
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 685356519, guid: a6e852c0aa2831146bc717d287a094dc, type: 3}
       propertyPath: m_UseGravity
       value: 0
