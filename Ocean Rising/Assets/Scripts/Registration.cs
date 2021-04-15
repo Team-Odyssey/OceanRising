@@ -10,14 +10,14 @@ public class Registration : MonoBehaviour
 
     public Button submitButton;
 
-    // public void CallRegister()
-    // {
-    //     StartCoroutine(Register());
-    // }
-    //
-    // IEnumerator Register()
-    // {
-    //     WWW www = new WWW("http://localhost/sqlconnect/register.php");
-    //     return www;
-    // }
+    public void CallRegister()
+    {
+        StartCoroutine(Register());
+    }
+
+    IEnumerator Register()
+    {
+        WWW www = new WWW("http://localhost/sqlconnect/register.php");
+        return www;
+    }
 }
