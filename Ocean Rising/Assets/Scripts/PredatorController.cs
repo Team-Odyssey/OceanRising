@@ -36,10 +36,17 @@ public class PredatorController : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, destination, step);
             //transform.LookAt(player.transform);
-            transform.rotation = Quaternion.LookRotation(transform.position, destination - transform.position);
-            // = Quaternion.Slerp(transform.rotation, targetRotation, 1 * Time.deltaTime);*/
-            //Quaternion targetRotation = Quaternion.LookRotation(player.transform.position - transform.position);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1 * Time.deltaTime);
+            //transform.rotation = Quaternion.LookRotation(transform.position, destination - transform.position);
+            FaceTarget();
+        }
+
+        void FaceTarget()
+        {
+            Vector3 direction = (player.transform.position - transform.position).normalized;
+            //Vector3 direction = player.transform.position.normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+
         }
 
         /*playerInsightRange = Physics.CheckSphere(transform.position, sightRange);

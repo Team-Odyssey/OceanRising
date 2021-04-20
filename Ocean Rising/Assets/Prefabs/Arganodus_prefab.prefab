@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/EatSmall
+  Event: event:/Music/EatSmall
   PlayEvent: 2
   StopEvent: 0
   AllowFadeout: 1

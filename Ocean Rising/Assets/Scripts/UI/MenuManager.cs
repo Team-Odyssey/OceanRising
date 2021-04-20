@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public Panel currentPanel = null;
+    public Panel currentPanel;
     private List<Panel> panelHistory = new List<Panel>();
 
     private void Start(){
