@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.27058825, g: 0.4862745, b: 0.5372549, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -856,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 148779151}
   - component: {fileID: 148779150}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Terrains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2631,7 +2631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485991133}
   m_LocalRotation: {x: 0.024614077, y: -0.11051856, z: 0.014195128, w: 0.99346787}
-  m_LocalPosition: {x: 91.670006, y: 5.42, z: 294.72}
+  m_LocalPosition: {x: 91.670006, y: 200, z: 294.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2780,6 +2780,7 @@ GameObject:
   - component: {fileID: 505598757}
   - component: {fileID: 505598756}
   - component: {fileID: 505598755}
+  - component: {fileID: 505598761}
   m_Layer: 8
   m_Name: VRCamera
   m_TagString: MainCamera
@@ -2973,6 +2974,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &505598761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505598753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c593ea1d4904804b05ef10faba0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weight: 1
 --- !u!1 &548989555
 GameObject:
   m_ObjectHideFlags: 0
@@ -5634,7 +5648,7 @@ GameObject:
   - component: {fileID: 1076915064}
   - component: {fileID: 1076915066}
   - component: {fileID: 1076915065}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TerrainA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5930,7 +5944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156221715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 186.99292, y: 6.74103, z: 46.10008}
+  m_LocalPosition: {x: 186.99292, y: 206.74103, z: 46.10008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 461068316}
@@ -7450,7 +7464,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1507162204}
   - component: {fileID: 1507162203}
-  m_Layer: 0
+  - component: {fileID: 1507162205}
+  m_Layer: 10
   m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7474,7 +7489,7 @@ MonoBehaviour:
   _timeProvider: {fileID: 0}
   _primaryLight: {fileID: 2138677392}
   _searchForPrimaryLightOnStartup: 1
-  _material: {fileID: 2100000, guid: 9def92ac79181fe41b238e91663f0fad, type: 2}
+  _material: {fileID: 2100000, guid: ef94c26e44a36e24a9dcbc5995a2bed1, type: 2}
   _layerName: Water
   _gravityMultiplier: 1
   _minTexelsPerWave: 3
@@ -7519,6 +7534,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1507162205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507162202}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c593ea1d4904804b05ef10faba0af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weight: 1
 --- !u!1 &1519777969
 GameObject:
   m_ObjectHideFlags: 0
@@ -8981,8 +9009,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841808820}
-  m_LocalRotation: {x: 0.0053010555, y: -0.82500684, z: 0.027915113, w: 0.5644079}
-  m_LocalPosition: {x: 188.7, y: 209.15, z: 108.3}
+  m_LocalRotation: {x: 0.02457871, y: -0.11298938, z: 0.014256289, w: 0.99318993}
+  m_LocalPosition: {x: 196.93, y: 199.52, z: 120.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 274927668}
@@ -8994,7 +9022,7 @@ Transform:
   - {fileID: 959473491}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 2.983, y: -111.212006, z: 1.3060001}
+  m_LocalEulerAnglesHint: {x: 2.983, y: -12.9470005, z: 1.3060001}
 --- !u!1 &1849194381
 GameObject:
   m_ObjectHideFlags: 0
