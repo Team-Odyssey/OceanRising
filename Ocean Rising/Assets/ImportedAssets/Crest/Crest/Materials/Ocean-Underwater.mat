@@ -88,10 +88,10 @@ Material:
     - _CausticsDepthOfField: 0.33
     - _CausticsDistortionScale: 25
     - _CausticsDistortionStrength: 0.16
-    - _CausticsFocalDepth: 2
-    - _CausticsStrength: 3.2
+    - _CausticsFocalDepth: 32
+    - _CausticsStrength: 5.06
     - _CausticsTextureAverage: 0.07
-    - _CausticsTextureScale: 5
+    - _CausticsTextureScale: 8
     - _ClipSurface: 1
     - _ClipUnderTerrain: 0
     - _CompileShaderWithDebugInfo: 0
@@ -111,7 +111,7 @@ Material:
     - _Foam3DLighting: 1
     - _FoamBubbleParallax: 0.14
     - _FoamScale: 10
-    - _ForceUnderwater: 0
+    - _ForceUnderwater: 1
     - _FresnelPower: 5
     - _Invert: 1
     - _LightIntensityMultiplier: 4
