@@ -1,174 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
---- !u!114 &-2729756341589525993
-=======
---- !u!114 &-6157219604933647073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637540374187609274
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 882
-  Exists: 1
---- !u!114 &-4935008369421681501
->>>>>>> 31981cc06c554038b4f467853be2c4ce4637cf84
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-<<<<<<< HEAD
-  m_Name: event:/Music/UpBeat
-  m_EditorClassIdentifier: 
-  Path: event:/Music/UpBeat
-  guid: 0b387e71260b9a4381b7abe84e794429
-  Banks:
-  - {fileID: 4005047000254274521}
-=======
-  m_Name: event:/Music/OceanTheme
-  m_EditorClassIdentifier: 
-  Path: event:/Music/OceanTheme
-  guid: 76b4e71ab0c7054fbee19196aeba288c
-  Banks:
-  - {fileID: 1775430427609510015}
->>>>>>> 31981cc06c554038b4f467853be2c4ce4637cf84
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-<<<<<<< HEAD
-=======
-  Length: 59376
---- !u!114 &-3264075607059267888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/UpBeat
-  m_EditorClassIdentifier: 
-  Path: event:/Music/UpBeat
-  guid: 0b387e71260b9a4381b7abe84e794429
-  Banks:
-  - {fileID: 1775430427609510015}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
->>>>>>> 31981cc06c554038b4f467853be2c4ce4637cf84
-  Length: 34899
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-<<<<<<< HEAD
-  - {fileID: 6206245853866408560}
-  - {fileID: 4005047000254274521}
-  EditorEvents:
-  - {fileID: -2729756341589525993}
-  - {fileID: 6692878236904130584}
-  - {fileID: 4738868735876127877}
-  - {fileID: 2252726963523964864}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 4005047000254274521}
-  StringsBanks:
-  - {fileID: 6206245853866408560}
-  stringsBankWriteTime: 637540306821238050
-  cacheVersion: 6
---- !u!114 &2252726963523964864
-=======
-  - {fileID: -6157219604933647073}
-  - {fileID: 1775430427609510015}
-  EditorEvents:
-  - {fileID: -3264075607059267888}
-  - {fileID: 1560158234069145562}
-  - {fileID: -4935008369421681501}
-  - {fileID: 2923701557778825551}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 1775430427609510015}
-  StringsBanks:
-  - {fileID: -6157219604933647073}
-  stringsBankWriteTime: 637540374187609274
-  cacheVersion: 6
---- !u!114 &1560158234069145562
->>>>>>> 31981cc06c554038b4f467853be2c4ce4637cf84
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-<<<<<<< HEAD
-  m_Name: event:/Music/DeeoOcean
-  m_EditorClassIdentifier: 
-  Path: event:/Music/DeeoOcean
-  guid: 87bcc0a949f2934289e076a6153d8373
-  Banks:
-  - {fileID: 4005047000254274521}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 42213
---- !u!114 &4005047000254274521
-=======
-  m_Name: event:/Music/EatSmall
-  m_EditorClassIdentifier: 
-  Path: event:/Music/EatSmall
-  guid: 40b1fbfcb0c67e4eaeb74f9eda4f1735
-  Banks:
-  - {fileID: 1775430427609510015}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1000
---- !u!114 &1775430427609510015
->>>>>>> 31981cc06c554038b4f467853be2c4ce4637cf84
+--- !u!114 &-908389827933180284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,12 +15,11 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637540374187599269
+  lastModified: 637540306821228086
   LoadResult: 0
   FileSizes: []
   Exists: 1
-<<<<<<< HEAD
---- !u!114 &4738868735876127877
+--- !u!114 &-311394024024337750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,20 +29,70 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/OceanTheme
+  m_Name: event:/Music/UpBeat
   m_EditorClassIdentifier: 
-  Path: event:/Music/OceanTheme
-  guid: 76b4e71ab0c7054fbee19196aeba288c
+  Path: event:/Music/UpBeat
+  guid: 0b387e71260b9a4381b7abe84e794429
   Banks:
-  - {fileID: 4005047000254274521}
+  - {fileID: -908389827933180284}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 59376
---- !u!114 &6206245853866408560
+  Length: 34899
+--- !u!114 &-14511737089992879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/EatSmall
+  m_EditorClassIdentifier: 
+  Path: event:/Music/EatSmall
+  guid: 40b1fbfcb0c67e4eaeb74f9eda4f1735
+  Banks:
+  - {fileID: -908389827933180284}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 454288686926002907}
+  - {fileID: -908389827933180284}
+  EditorEvents:
+  - {fileID: -311394024024337750}
+  - {fileID: -14511737089992879}
+  - {fileID: 1543614896561215468}
+  - {fileID: 1311909461537177849}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -908389827933180284}
+  StringsBanks:
+  - {fileID: 454288686926002907}
+  stringsBankWriteTime: 637540306821238050
+  cacheVersion: 6
+--- !u!114 &454288686926002907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,10 +113,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 882
   Exists: 1
---- !u!114 &6692878236904130584
-=======
---- !u!114 &2923701557778825551
->>>>>>> 31981cc06c554038b4f467853be2c4ce4637cf84
+--- !u!114 &1311909461537177849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,20 +123,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/EatSmall
+  m_Name: event:/Music/DeeoOcean
   m_EditorClassIdentifier: 
-  Path: event:/Music/EatSmall
-  guid: 40b1fbfcb0c67e4eaeb74f9eda4f1735
+  Path: event:/Music/DeeoOcean
+  guid: 87bcc0a949f2934289e076a6153d8373
   Banks:
-<<<<<<< HEAD
-  - {fileID: 4005047000254274521}
-=======
-  - {fileID: 1775430427609510015}
->>>>>>> 31981cc06c554038b4f467853be2c4ce4637cf84
+  - {fileID: -908389827933180284}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1000
+  Length: 42213
+--- !u!114 &1543614896561215468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/OceanTheme
+  m_EditorClassIdentifier: 
+  Path: event:/Music/OceanTheme
+  guid: 76b4e71ab0c7054fbee19196aeba288c
+  Banks:
+  - {fileID: -908389827933180284}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 59376
