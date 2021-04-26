@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719265126364156763}
   - component: {fileID: 5737947093625840682}
+  - component: {fileID: 2759292558238443528}
   - component: {fileID: 5758764401323167280}
   - component: {fileID: 8257646595696398433}
   - component: {fileID: 5200178151019639157}
@@ -97,6 +98,21 @@ LODGroup:
     renderers:
     - renderer: {fileID: 8958244285799838955}
   m_Enabled: 1
+--- !u!114 &2759292558238443528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193803762684611041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6470b2a4905f640aebf9c123836451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FOVAngle: 300
+  _smoothDamp: 2
+  speed: 2
 --- !u!54 &5758764401323167280
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -159,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/Music/EatSmall
+  Event: event:/EatSmall
   PlayEvent: 2
   StopEvent: 0
   AllowFadeout: 1
