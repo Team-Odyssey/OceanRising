@@ -1,39 +1,34 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TypeInput : MonoBehaviour
 {
-    public Text name;
-    string word;
-    int wordIndex = 0;
-    char[] nameChar = new char[30];
+    public Text name; //Username that will be shown in input field
+    string word; //Characters in the Input field
+    int charIndex = 0; //How many letters
+    char[] nameChar = new char[15]; //Array of letters
     string alpha;
-    string alpha2;
 
     public void alphabetFunction(string alphabet)
     {
-        wordIndex++;
-        char[] keepchar = alphabet.ToCharArray();
-        nameChar[wordIndex] = keepchar[0];
-        alpha = nameChar[wordIndex].ToString();
-        word = word + alpha;
-        name.text = word;
+        charIndex++;
+        char[] keepchar = alphabet.ToCharArray(); //Turns alphabet into char
+        nameChar[charIndex] = keepchar[0]; //Stores alphabet into char array
+        word = word + alphabet; //Displays next letter
+        name.text = word; //Displays in text field
     }
 
     public void backSpace()
     {
-        if (wordIndex >=0)
-        {
-            wordIndex--;
-            alpha2 = null;
-            for(int i = 0; i < wordIndex; i++){
-                alpha2 = alpha2 + nameChar[i].ToString();
-            }
-            word = alpha2;
-            name.text = word;
-        }
+        string str = new string(nameChar);
+        word = str;
+        word.ToCharArray();
+        word.Remove(charIndex);
+        string newword = word.ToString();
+        name.text = newword;
+        charIndex--;
     }
 
 }
