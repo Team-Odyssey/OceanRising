@@ -1,27 +1,31 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class PauseMenu : MonoBehaviour
 {
-
+    [SerializeField] public SteamVR_Action_Boolean menuButton;
     public static bool isGamePaused = false;
     public GameObject pauseMenu;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        Debug.Log("Key has been pressed");
+        bool menuButtonPressed = menuButton.state;
+        if(menuButtonPressed)
         {
-            if(isGamePaused)
+            Debug.Log("Key has been pressed");
             {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
+                if(isGamePaused)
+                {
+                    ResumeGame();
+                }
+                else
+                {
+                    PauseGame();
+                }
             }
         }
     }
@@ -41,6 +45,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
         Debug.Log("Menu has been loaded");
     }

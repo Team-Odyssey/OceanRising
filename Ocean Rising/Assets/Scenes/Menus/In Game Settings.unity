@@ -12600,7 +12600,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
 --- !u!224 &1004059762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21521,7 +21521,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1762568100}
-        m_MethodName: SetCurrentWithHistory
+        m_MethodName: SetCurrent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1004059764}
@@ -21583,7 +21583,7 @@ GameObject:
   - component: {fileID: 1762568101}
   - component: {fileID: 1762568100}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21681,7 +21681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42542f400fc2e094ea634c48cf178a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPanel: {fileID: 1004059764}
+  currentPanel: {fileID: 0}
 --- !u!114 &1762568101
 MonoBehaviour:
   m_ObjectHideFlags: 0
