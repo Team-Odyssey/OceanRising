@@ -27,12 +27,12 @@ public class MenuManager : MonoBehaviour
         panelHistory.RemoveAt(lastIndex);
     }
 
-    public void SetCurrentWithHistory(Panel newPanel){
-        panelHistory.Add(currentPanel);
-        SetCurrent(newPanel);
-    }
+    // public void SetCurrentWithHistory(Panel newPanel){
+    //     panelHistory.Add(currentPanel);
+    //     SetCurrent(newPanel);
+    // }
 
-    private void SetCurrent(Panel newPanel){
+    public void SetCurrent(Panel newPanel){
         currentPanel.Hide();
         currentPanel = newPanel;
         currentPanel.Show();

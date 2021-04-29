@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Singleplayer.unity
     guid: 8e162ede3bc1ad14885c77ef28ae429e
+  - enabled: 1
+    path: Assets/Scenes/Menus/In Game Settings.unity
+    guid: 41eaa154a4fdd854b8a69a7168731569
+  - enabled: 1
+    path: Assets/Scenes/Menus/Multiplayer Menu.unity
+    guid: 9aab7e366d9a68745be0e750f3991c7a
+  - enabled: 1
+    path: Assets/Scenes/Menus/Login.unity
+    guid: 1ecd675a7ebbfbe4ba8c22c0bbb9a930
+  - enabled: 1
+    path: Assets/Scenes/Menus/Register.unity
+    guid: ea293030307e4c34d86a7bedca5308d6
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: f7632fd79cc39214a9614abc00a89b47,
       type: 2}
