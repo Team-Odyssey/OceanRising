@@ -30,10 +30,9 @@ public class MenuManager : MonoBehaviour
     public void SetCurrentWithHistory(Panel newPanel){
         panelHistory.Add(currentPanel);
         SetCurrent(newPanel);
-        newPanel.Show();
     }
 
-    public void SetCurrent(Panel newPanel){
+    private void SetCurrent(Panel newPanel){
         currentPanel.Hide();
         currentPanel = newPanel;
         currentPanel.Show();
