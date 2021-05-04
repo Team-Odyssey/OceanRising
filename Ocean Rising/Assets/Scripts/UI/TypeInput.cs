@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TypeInput : MonoBehaviour
 {
     public Text name; //Username that will be shown in input field
+    public Text store;
     string word; //Characters in the Input field
     int charIndex = 0; //How many letters
     char[] nameChar = new char[15]; //Array of letters
