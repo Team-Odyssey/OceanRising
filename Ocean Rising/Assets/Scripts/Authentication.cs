@@ -1,48 +1,48 @@
-﻿/*using UnityEngine;
-using PlayFab;
-using PlayFab.ClientModels;
-using TMPro;
+﻿// using UnityEngine;
+// using PlayFab;
+// using PlayFab.ClientModels;
+// using TMPro;
 
-public class Authentication : MonoBehaviour
-{
-    [SerializeField] private GameObject signInDisplay = default;
-    [SerializeField] private TMP_InputField usernameInputField = default;
-    [SerializeField] private TMP_InputField passwordInputField = default;
+// public class Authentication : MonoBehaviour
+// {
+//     [SerializeField] private GameObject signInDisplay = default;
+//     [SerializeField] private TMP_InputField usernameInputField = default;
+//     [SerializeField] private TMP_InputField passwordInputField = default;
 
-    public static string SessionTicket;
-    public static string EntityId;
+//     public static string SessionTicket;
+//     public static string EntityId;
 
-    public void CreateAccount()
-    {
-        PlayFabClientAPI.RegisterPlayFabUser(new RegisterPlayFabUserRequest
-        {
-            Username = usernameInputField.text,
-            Password = passwordInputField.text
-        }, result =>
-        {
-            SessionTicket = result.SessionTicket;
-            EntityId = result.EntityToken.Entity.Id;
-            signInDisplay.SetActive(false);
-        }, error =>
-        {
-            Debug.LogError(error.GenerateErrorReport());
-        });
-    }
+//     public void CreateAccount()
+//     {
+//         PlayFabClientAPI.RegisterPlayFabUser(new RegisterPlayFabUserRequest
+//         {
+//             Username = usernameInputField.text,
+//             Password = passwordInputField.text
+//         }, result =>
+//         {
+//             SessionTicket = result.SessionTicket;
+//             EntityId = result.EntityToken.Entity.Id;
+//             signInDisplay.SetActive(false);
+//         }, error =>
+//         {
+//             Debug.LogError(error.GenerateErrorReport());
+//         });
+//     }
 
-    public void SignIn()
-    {
-        PlayFabClientAPI.LoginWithPlayFab(new LoginWithPlayFabRequest
-        {
-            Username = usernameInputField.text,
-            Password = passwordInputField.text
-        }, result =>
-        {
-            SessionTicket = result.SessionTicket;
-            EntityId = result.EntityToken.Entity.Id;
-            signInDisplay.SetActive(false);
-        }, error =>
-        {
-            Debug.LogError(error.GenerateErrorReport());
-        });
-    }
-}*/
+//     public void SignIn()
+//     {
+//         PlayFabClientAPI.LoginWithPlayFab(new LoginWithPlayFabRequest
+//         {
+//             Username = usernameInputField.text,
+//             Password = passwordInputField.text
+//         }, result =>
+//         {
+//             SessionTicket = result.SessionTicket;
+//             EntityId = result.EntityToken.Entity.Id;
+//             signInDisplay.SetActive(false);
+//         }, error =>
+//         {
+//             Debug.LogError(error.GenerateErrorReport());
+//         });
+//     }
+// }
