@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using TMPro;
@@ -45,4 +45,4 @@ public class Authentication : MonoBehaviour
             Debug.LogError(error.GenerateErrorReport());
         });
     }
-}
+}*/
