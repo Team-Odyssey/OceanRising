@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,10 +27,11 @@ public class MenuManager : MonoBehaviour
         panelHistory.RemoveAt(lastIndex);
     }
 
-    // public void SetCurrentWithHistory(Panel newPanel){
-    //     panelHistory.Add(currentPanel);
-    //     SetCurrent(newPanel);
-    // }
+    public void SetCurrentWithHistory(Panel newPanel){
+        panelHistory.Add(currentPanel);
+        SetCurrent(newPanel);
+        newPanel.Show();
+    }
 
     public void SetCurrent(Panel newPanel){
         currentPanel.Hide();
