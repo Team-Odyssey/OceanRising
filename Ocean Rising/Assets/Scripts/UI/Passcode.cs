@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Passcode : MonoBehaviour
 {
-    public Text code; //Passcode that will be shown in input field
-    public Text storecode;
+    public TMP_Text code; //Passcode that will be shown in input field
+    public TMP_InputField storecode;
     string codeNum; //Numbers in the Input field
     int intIndex = 0; //How many numbers
-    int[] intChar = new int[4]; //Array of numbers
+    int[] intChar = new int[6]; //Array of numbers
     public void numberFunction(int number)
     {
         intChar[intIndex] = number; //Stores int into int array
@@ -20,7 +21,11 @@ public class Passcode : MonoBehaviour
     }
 
     public void backSpace()
-    {
+    {   
+        intChar[intIndex] = ' ';
+        codeNum = codeNum.Remove(codeNum.Length - 1, 1);
+        code.text = codeNum.ToString();
+        intIndex--;
 
     }
 

@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TypeInput : MonoBehaviour
 {
-    public Text name; //Username that will be shown in input field
-    public Text store;
+    public TMP_Text name; //Username that will be shown in input field
+    public TMP_InputField store;
     string word; //Characters in the Input field
     int charIndex = 0; //How many letters
-    char[] nameChar = new char[15]; //Array of letters
+    char[] nameChar = new char[20]; //Array of letters
     string alpha;
 
     public void alphabetFunction(string alphabet)
@@ -23,12 +24,9 @@ public class TypeInput : MonoBehaviour
 
     public void backSpace()
     {
-        string str = new string(nameChar);
-        word = str;
-        word.ToCharArray();
-        word.Remove(charIndex);
-        string newword = word.ToString();
-        name.text = newword;
+        nameChar[charIndex] = ' ';
+        word = word.Remove(word.Length - 1, 1);
+        name.text = word;
         charIndex--;
     }
 
