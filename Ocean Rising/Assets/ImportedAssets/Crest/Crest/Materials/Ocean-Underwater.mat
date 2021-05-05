@@ -88,10 +88,10 @@ Material:
     - _CausticsDepthOfField: 0.33
     - _CausticsDistortionScale: 25
     - _CausticsDistortionStrength: 0.16
-    - _CausticsFocalDepth: 2
-    - _CausticsStrength: 3.2
+    - _CausticsFocalDepth: 32
+    - _CausticsStrength: 5.06
     - _CausticsTextureAverage: 0.07
-    - _CausticsTextureScale: 5
+    - _CausticsTextureScale: 8
     - _ClipSurface: 1
     - _ClipUnderTerrain: 0
     - _CompileShaderWithDebugInfo: 0
@@ -124,6 +124,7 @@ Material:
     - _PlanarReflectionNormalsStrength: 1
     - _PlanarReflections: 0
     - _ProceduralSky: 0
+    - _Projection: 0
     - _ReflectionBlur: 0
     - _RefractAmt: 0
     - _RefractionStrength: 1
@@ -171,7 +172,7 @@ Material:
     - _WaveFoamStart: 0
     - _WaveFoamStrength: 1
     m_Colors:
-    - _DepthFogDensity: {r: 0.3, g: 0.3, b: 0.3, a: 1}
+    - _DepthFogDensity: {r: 0.05, g: 0.02, b: 0.01, a: 1}
     - _Diffuse: {r: 0, g: 0.012440592, b: 0.5660378, a: 1}
     - _DiffuseGrazing: {r: 0.06345675, g: 0.10691091, b: 0.5849056, a: 1}
     - _DiffuseShadow: {r: 0, g: 0.3560004, b: 0.5647059, a: 1}
