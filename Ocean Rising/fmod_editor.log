@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002287BE61678 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000027992EB5728 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -20,12 +20,162 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000278C7BF9118 : node = 000002787ABA1160
+[LOG] SystemI::createSound                     : add node to async list : head = 00000279D95E0978.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000278C7BF9118
+[LOG] SystemI::createSoundInternal             :     Create name='Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3375744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002787ABA1270
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 6800
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Deep_Ocean_Sketch', format=5, channels=2, frequency=48000, lengthbytes=497088, lengthpcm=1675180, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.659912.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000278C7BF9118
+[LOG] SoundI::release                          : Deep_Ocean_Sketch (000002789013FDD8)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (0000027991F69578)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (0000027890140498)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000027991F92E28 : node = 000002787ABA0EE0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000279D95E0978.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000027991F92E28
+[LOG] SystemI::createSoundInternal             :     Create name='Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3375744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002787ABA0FF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Predator_Track', format=5, channels=2, frequency=48000, lengthbytes=489280, lengthpcm=1791840, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609680.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000027991F92E28
+[LOG] SoundI::release                          : Predator_Track (00000278901402E8)
+[LOG] SoundI::release                          :     Predator_Track (0000027991F6B458)
+[LOG] SoundI::release                          :     Predator_Track (000002799215EC28)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000278996A2658 : node = 000002787ABA1020
+[LOG] SystemI::createSound                     : add node to async list : head = 00000279D95E0978.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000278996A2658
+[LOG] SystemI::createSoundInternal             :     Create name='Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3375744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002787ABA1130
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 6800
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Deep_Ocean_Sketch', format=5, channels=2, frequency=48000, lengthbytes=497088, lengthpcm=1675180, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.659912.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000278996A2658
+[LOG] SoundI::release                          : Deep_Ocean_Sketch (00000278C7BF9118)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (0000027991F679D8)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (00000278C7BF92C8)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002789013FDD8 : node = 000002787ABA1160
+[LOG] SystemI::createSound                     : add node to async list : head = 00000279D95E0978.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002789013FDD8
+[LOG] SystemI::createSoundInternal             :     Create name='Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3375744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002787ABA1270
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Predator_Track', format=5, channels=2, frequency=48000, lengthbytes=489280, lengthpcm=1791840, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.609680.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002789013FDD8
+[LOG] SoundI::release                          : Predator_Track (0000027991F92E28)
+[LOG] SoundI::release                          :     Predator_Track (0000027991F67B78)
+[LOG] SoundI::release                          :     Predator_Track (0000027991F954F8)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002799215E058 : node = 000002787ABA0EE0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000279D95E0978.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002799215E058
+[LOG] SystemI::createSoundInternal             :     Create name='Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3375744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002787ABA0FF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 21184
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Bubbles SOUND EFFECT - Bubble SOUNDS Blasen Blubberblasen Blubbern Bubbling SFX', format=5, channels=2, frequency=48000, lengthbytes=1216608, lengthpcm=5253746, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.597748.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002799215E058
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : Bubbles SOUND EFFECT - Bubble SOUNDS Blasen Blubberblasen Blubbern Bubbling SFX (000002799215E058)
+[LOG] SoundI::release                          :     Bubbles SOUND EFFECT - Bubble SOUNDS Blasen Blubberblasen Blubbern Bubbling SFX (0000027991F681F8)
+[LOG] SoundI::release                          :     Bubbles SOUND EFFECT - Bubble SOUNDS Blasen Blubberblasen Blubbern Bubbling SFX (000002799215EC28)
+[LOG] SystemI::createSound                     : filename = Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002799215E058 : node = 000002787ABA0EE0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000279D95E0978.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002799215E058
+[LOG] SystemI::createSoundInternal             :     Create name='Sounds\Fmod\OceanFmod\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3375744
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 11968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002787ABA0FF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 6800
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Deep_Ocean_Sketch', format=5, channels=2, frequency=48000, lengthbytes=497088, lengthpcm=1675180, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.659912.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002799215E058
+[LOG] SoundI::release                          : Deep_Ocean_Sketch (00000278996A2658)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (0000027991F67D18)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (000002789013FA78)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : Predator_Track (000002789013FDD8)
+[LOG] SoundI::release                          :     Predator_Track (0000027991F679D8)
+[LOG] SoundI::release                          :     Predator_Track (00000278901402E8)
+[LOG] SoundI::release                          : Deep_Ocean_Sketch (000002799215E058)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (0000027991F67B78)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (000002799215EC28)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -33,3 +183,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

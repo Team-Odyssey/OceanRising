@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.14059493, g: 0.22454314, b: 0.4282263, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4155,24 +4155,24 @@ Transform:
   - {fileID: 1556413711}
   - {fileID: 415408953}
   - {fileID: 959615698}
+  - {fileID: 213284837}
   - {fileID: 950898884}
   - {fileID: 403104512}
   - {fileID: 2016625576}
   - {fileID: 1676749036}
   - {fileID: 131628938}
   - {fileID: 171088766}
+  - {fileID: 833723691}
   - {fileID: 461049560}
   - {fileID: 790431690}
-  - {fileID: 213284837}
-  - {fileID: 833723691}
-  - {fileID: 1989111977}
-  - {fileID: 207715918}
-  - {fileID: 1506968107}
-  - {fileID: 603276457}
   - {fileID: 158824803}
   - {fileID: 651663161}
+  - {fileID: 603276457}
+  - {fileID: 1989111977}
   - {fileID: 2105777090}
+  - {fileID: 207715918}
   - {fileID: 2092803035}
+  - {fileID: 1506968107}
   - {fileID: 2043852503}
   - {fileID: 587294438}
   - {fileID: 2144432498}
@@ -42147,6 +42147,14 @@ MonoBehaviour:
   leftHandPose:
     actionPath: /actions/default/in/Pose
     needsReinit: 0
+  MorphFish:
+    actionPath: /actions/default/in/MorphFish
+    needsReinit: 0
+  morphSpeeds:
+  - 1
+  - 2
+  - 3
+  - 5
 --- !u!114 &1841808826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42154,7 +42162,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841808820}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d68caf5e0d84cc54ca9811cb39cf8719, type: 3}
   m_Name: 
