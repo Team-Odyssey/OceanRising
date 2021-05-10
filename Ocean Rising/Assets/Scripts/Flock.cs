@@ -9,7 +9,7 @@ using Unity.Burst;
 
 public class Flock : MonoBehaviour
 {
-	Transform playerTransform;
+	public Transform playerTransform;
 	Transform predatorTransform;
 
 	//
@@ -91,8 +91,9 @@ public class Flock : MonoBehaviour
 	{
 		SetRandomValues();
 		GenerateUnits();
+		
 		predatorTransform = GameObject.FindGameObjectWithTag("Predator").transform;
-		playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+		
 	}
 
 	private void SetRandomValues()
