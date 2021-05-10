@@ -6,13 +6,16 @@ public class Respawn : MonoBehaviour
 {
     [SerializeField] private Transform player;
 
-    [SerializeField] private Transform respawnPoint;
-    public HealthLevel healthLevel;
-    public PowerUp powerLevel;
+    private Transform respawnPoint;
+    private HealthLevel healthLevel;
+    private PowerUp powerLevel;
 
     void OnTriggerEnter(Collider other){
+        
         if(other.tag == "Player"){
-            player.transform.position = respawnPoint.transform.position;
+            healthLevel = other.GetComponent<HealthLevel>();
+            powerLevel = other.GetComponent<PowerUp>();
+            other.transform.position = respawnPoint.transform.position;
             healthLevel.AddHealth(100f);
             powerLevel.SetToZero();
 
