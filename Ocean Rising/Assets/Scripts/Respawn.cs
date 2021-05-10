@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    private Transform player;
 
     private Transform respawnPoint;
     private HealthLevel healthLevel;

@@ -38,7 +38,8 @@ public class PredatorController : MonoBehaviour
 
     void Update()
     {
-        //player = GameObject.FindGameObjectWithTag("Player").transform;
+        if(player == null)
+            player = GameObject.FindGameObjectWithTag("Player");
         //var randPosition = randomPoint.transform.position;
         var destination = player.transform.position;
         var step = 2f * Time.deltaTime;
