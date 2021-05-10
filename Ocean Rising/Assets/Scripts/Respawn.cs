@@ -6,7 +6,7 @@ public class Respawn : MonoBehaviour
 {
     private Transform player;
 
-    private Transform respawnPoint;
+    public Transform respawnPoint;
     private HealthLevel healthLevel;
     private PowerUp powerLevel;
 
