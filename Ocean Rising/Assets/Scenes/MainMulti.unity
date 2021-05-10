@@ -13897,6 +13897,60 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 627172044}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &634106434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634106436}
+  - component: {fileID: 634106435}
+  m_Layer: 0
+  m_Name: WaterSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &634106435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634106434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Water
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!4 &634106436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634106434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 235.28, y: 156.96, z: 198.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &636069981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1307210268409795971, guid: d07fe4a0472fc254ebd0921d39376d06,
@@ -46884,6 +46938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc9b4c0cac904f43b02b2c22979de4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  respawnPoint: {fileID: 485991135}
 --- !u!114 &8971898819549407458
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3314,13 +3314,14 @@ GameObject:
   - component: {fileID: 3274794371935545685}
   - component: {fileID: 3274794371935545684}
   - component: {fileID: 3274794371935545683}
-  - component: {fileID: 3274794371935545682}
-  - component: {fileID: 3274794371935545681}
+  - component: {fileID: 2064582479690553235}
+  - component: {fileID: 9001576894134715269}
   - component: {fileID: 3274794371935545680}
   - component: {fileID: 3274794371935545695}
   - component: {fileID: 3274794371935545694}
   - component: {fileID: 3274794371935545693}
   - component: {fileID: 179126877676161048}
+  - component: {fileID: 7125037016680760013}
   m_Layer: 0
   m_Name: Network Player
   m_TagString: Player
@@ -3393,7 +3394,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3274794371935545682
+--- !u!114 &2064582479690553235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3402,15 +3403,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3274794371935545692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68caf5e0d84cc54ca9811cb39cf8719, type: 3}
+  m_Script: {fileID: 11500000, guid: 65d3905e53b61b748a804c4a74c89bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   input:
     actionPath: /actions/default/in/TouchPad
     needsReinit: 0
   speed: 2
-  showController: 1
---- !u!114 &3274794371935545681
+  showController: 0
+--- !u!114 &9001576894134715269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3419,7 +3420,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3274794371935545692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17d3bfd50d9772f4292665d7d31cad81, type: 3}
+  m_Script: {fileID: 11500000, guid: 7915b6d965866ee469804d12e1417b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   swimmingForce: 6
@@ -3522,6 +3523,21 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &7125037016680760013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274794371935545692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa601991640bcbc4aa08ce0a76fc339c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!1 &3274794372078121959
 GameObject:
   m_ObjectHideFlags: 0

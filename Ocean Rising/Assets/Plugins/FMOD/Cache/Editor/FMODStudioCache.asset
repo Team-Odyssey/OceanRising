@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8911233264550217122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Water
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Water
+  guid: b00c72d2d7cf6642b60d61b6aa188c77
+  Banks:
+  - {fileID: -3092863905876299037}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3596143
 --- !u!114 &-8825805526575049116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,11 +107,11 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637546296374274119
+  lastModified: 637562481764870802
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1138
+    Value: 1226
   Exists: 1
 --- !u!114 &-5534575286887775848
 MonoBehaviour:
@@ -151,7 +174,7 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637546296374274119
+  lastModified: 637562481764860791
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -181,12 +204,14 @@ MonoBehaviour:
   - {fileID: -8825805526575049116}
   - {fileID: 9112459180982852678}
   - {fileID: 347987210742603029}
+  - {fileID: 1510137176441164746}
+  - {fileID: -8911233264550217122}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3092863905876299037}
   StringsBanks:
   - {fileID: -5818372918237677817}
-  stringsBankWriteTime: 637546296374274119
+  stringsBankWriteTime: 637562481764870802
   cacheVersion: 6
 --- !u!114 &347987210742603029
 MonoBehaviour:
@@ -211,6 +236,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &1510137176441164746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Swim
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Swim
+  guid: 3f5a6eea2d8e2d4bbced02e787b240ca
+  Banks:
+  - {fileID: -3092863905876299037}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
 --- !u!114 &3185489915921626059
 MonoBehaviour:
   m_ObjectHideFlags: 0
