@@ -13,6 +13,7 @@ public class networkPlayer : MonoBehaviour
     // public Transform rightHand;
     private PhotonView photonView;
     private StudioListener listener;
+    public Camera VRcam;
 
     void Start(){
         photonView = GetComponent<PhotonView>();
@@ -21,6 +22,8 @@ public class networkPlayer : MonoBehaviour
     void Update(){
         if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
         {
+            if(VRcam.enabled == true)
+                VRcam.enabled = false; 
             return;
         }
         // if(photonView.IsMine){
