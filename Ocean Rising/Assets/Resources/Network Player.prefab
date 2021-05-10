@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 814743213682149855}
   - component: {fileID: 5554225918079270574}
-  - component: {fileID: 2996299934811919704}
   m_Layer: 0
   m_Name: DevonianLungfish_prefab
   m_TagString: Untagged
@@ -63,19 +62,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 523197845946650686}
   m_Enabled: 1
---- !u!65 &2996299934811919704
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508591158629221}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.8575575, z: 6.181084}
-  m_Center: {x: 0, y: 0.92877877, z: -0.318867}
 --- !u!1 &267624189443942831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,7 +1768,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3274794370542934124}
-  - component: {fileID: 1755157281644401626}
   m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
@@ -1805,22 +1790,6 @@ Transform:
   m_Father: {fileID: 3274794370000207818}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1755157281644401626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3274794370542934123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1 &3274794370640806692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,8 +3211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aaa8a3afb932fe478757c1e89cf0cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initializeSteamVROnAwake: 1
-  doNotDestroy: 1
+  initializeSteamVROnAwake: 0
+  doNotDestroy: 0
   steamvr_render: {fileID: 0}
 --- !u!114 &3274794371365658911
 MonoBehaviour:
@@ -3275,7 +3244,7 @@ MonoBehaviour:
     actionSetPath: /actions/default
   forSources: 0
   disableAllOtherActionSets: 0
-  activateOnStart: 1
+  activateOnStart: 0
   deactivateOnDestroy: 1
   initialPriority: 0
 --- !u!1 &3274794371405869333
@@ -4166,7 +4135,6 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 458599269294776876}
   - {fileID: 1170276649062002865}
-  - {fileID: 1755157281644401626}
   sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
