@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3157126912636411767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.346, y: 1.146, z: 1.484}
+  m_LocalPosition: {x: 0.133, y: 1.146, z: 1.484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4375987825008167076}
@@ -3302,6 +3302,7 @@ GameObject:
   - component: {fileID: 3274794371935545693}
   - component: {fileID: 179126877676161048}
   - component: {fileID: 7125037016680760013}
+  - component: {fileID: 6169830044582669706}
   m_Layer: 0
   m_Name: Test Player
   m_TagString: Player
@@ -3317,7 +3318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3274794371935545692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.058, y: -0.058, z: -0.232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3274794370230811868}
@@ -3521,6 +3522,22 @@ MonoBehaviour:
   rightHand: {fileID: 3274794371127596571}
   VRcam: {fileID: 3274794370000207817}
   canvas: {fileID: 3274794370720933285}
+--- !u!114 &6169830044582669706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274794371935545692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &3274794372078121959
 GameObject:
   m_ObjectHideFlags: 0
