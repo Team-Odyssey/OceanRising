@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6106053138194901788}
   - component: {fileID: 1683190632706848406}
+  - component: {fileID: 8678207681246052049}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -25,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3157126912636411767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.004, y: -0.02, z: -0.011}
+  m_LocalPosition: {x: 0.346, y: 1.146, z: 1.484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4375987825008167076}
-  m_Father: {fileID: 3274794370000207818}
+  m_Father: {fileID: 3274794370230811868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1683190632706848406
@@ -48,6 +49,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &8678207681246052049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3157126912636411767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145363ea52ed47842a552cfc756e9b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VRcam: {fileID: 3274794370000207808}
 --- !u!1 &3274794370000207817
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,12 +96,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6106053138194901788}
   - {fileID: 3274794370720933286}
   - {fileID: 3270367004915365984}
   - {fileID: 3277918757557527550}
   m_Father: {fileID: 3274794370230811868}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3274794370000207808
 Camera:
@@ -449,7 +462,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3274794370230811868}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &3274794370107981237
 CapsuleCollider:
@@ -669,6 +682,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 6106053138194901788}
   - {fileID: 3274794370107981234}
   - {fileID: 3274794371843109459}
   - {fileID: 3274794371127596572}
@@ -1234,7 +1248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3274794370230811868}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3274794370515420358
 MonoBehaviour:
@@ -1434,7 +1448,7 @@ RectTransform:
   - {fileID: 3274794370409728167}
   - {fileID: 3274794370331668483}
   m_Father: {fileID: 3274794370000207818}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2307,7 +2321,7 @@ Transform:
   - {fileID: 3274794370480219874}
   - {fileID: 3274794370052060492}
   m_Father: {fileID: 3274794370230811868}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3274794371127596575
 MonoBehaviour:
@@ -3163,7 +3177,7 @@ Transform:
   - {fileID: 3274794370644764331}
   - {fileID: 3274794370778121377}
   m_Father: {fileID: 3274794370230811868}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3274794371843109456
 MonoBehaviour:
@@ -3738,7 +3752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4720579618361426, guid: 1ab0847a8e46b4c4fa728256231f88eb, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4720579618361426, guid: 1ab0847a8e46b4c4fa728256231f88eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3806,7 +3820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4478995129147352, guid: 6d79ad5f5edb537448c2c13e54ffac88, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4478995129147352, guid: 6d79ad5f5edb537448c2c13e54ffac88, type: 3}
       propertyPath: m_LocalPosition.x
