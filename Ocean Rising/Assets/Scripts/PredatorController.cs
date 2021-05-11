@@ -11,9 +11,16 @@ public class PredatorController : MonoBehaviour
     public float attackRange = 3f;
     public Vector3 randomPoint;
     public float turnTime = 10f;
+    [SerializeField] private Animator animator;
 
     private bool isWandering = true;
+    private Vector3 lastPosition;
+    private static readonly int Speed = Animator.StringToHash("speed");
 
+    void Awake()
+    {
+        lastPosition = transform.position;
+    }
 
     void Start()
     {
@@ -31,7 +38,8 @@ public class PredatorController : MonoBehaviour
 
     void Update()
     {
-        //player = GameObject.FindGameObjectWithTag("Player").transform;
+        if(player == null)
+            player = GameObject.FindGameObjectWithTag("Player");
         //var randPosition = randomPoint.transform.position;
         var destination = player.transform.position;
         var step = 2f * Time.deltaTime;
@@ -40,7 +48,7 @@ public class PredatorController : MonoBehaviour
         if (Vector3.Distance(transform.position, destination) <= sightRange)
         {
             transform.position = Vector3.MoveTowards(transform.position, destination, step);
-            //transform.LookAt(player.transform);
+            transform.LookAt(player.transform);
             //transform.rotation = Quaternion.LookRotation(transform.position, destination - transform.position);
             
             FaceTarget();
@@ -57,7 +65,6 @@ public class PredatorController : MonoBehaviour
             //Vector3 direction = player.transform.position.normalized;
             Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
-
         }
 
         if (isWandering == true)
@@ -82,14 +89,22 @@ public class PredatorController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
 
         }
-
-       
+        
+        UpdateAnimatorSpeed(); // sets animator speed based on how fast predator is moving
 
         /*playerInsightRange = Physics.CheckSphere(transform.position, sightRange);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange);*/
 
+    }
 
-
+    void UpdateAnimatorSpeed()
+    {
+        var position = transform.position;
+        var distance = Vector3.Distance(lastPosition, position); // how far has it travelled from last frame
+        var speed = distance / Time.deltaTime;
+        lastPosition = position; 
+        
+        animator.SetFloat(Speed, speed);
     }
 
 }

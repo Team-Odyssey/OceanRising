@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Menu.unity
     guid: 2a49d88951275904c8724d7e3066b821
   - enabled: 1
-    path: Assets/Scenes/Main.unity
-    guid: cb04f16c11bb71b4782cfcd96e0638cb
-  - enabled: 1
     path: Assets/Scenes/TutorialA.unity
     guid: a34245818b769ed418217c2890f8421e
   - enabled: 0
@@ -20,30 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialB.unity
     guid: b963f0e636f3ae244a259b32bf12de30
-  - enabled: 1
-    path: Assets/Scenes/Singleplayer.unity
-    guid: 8e162ede3bc1ad14885c77ef28ae429e
-  - enabled: 1
-    path: Assets/Scenes/Menus/In Game Settings.unity
-    guid: 41eaa154a4fdd854b8a69a7168731569
-  - enabled: 1
-    path: Assets/Scenes/Menus/Multiplayer Menu.unity
-    guid: 9aab7e366d9a68745be0e750f3991c7a
-  - enabled: 1
-    path: Assets/Scenes/Menus/Login.unity
-    guid: 1ecd675a7ebbfbe4ba8c22c0bbb9a930
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Menus/Passcode.unity
-    guid: 4fa4576e048e8d548bf2e79d0f14e944
+    path: Assets/Scenes/MainMulti.unity
+    guid: 0ab58f96f19ae11438747583937becd1
   - enabled: 1
-    path: Assets/Scenes/Menus/Create Passcode.unity
-    guid: 9583f043af8b48341aec0b47d1a99f41
-  - enabled: 1
-    path: Assets/Scenes/Menus/Register.unity
-    guid: b3b04c71d2f8f9a48856c3c8a41ed2d8
+    path: Assets/Scenes/Singleplayer.unity
+    guid: ae1500c2d855494489bd3fcb59a63e64
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: f7632fd79cc39214a9614abc00a89b47,
       type: 2}

@@ -16,6 +16,7 @@ public class SwimmingController : MonoBehaviour
     [SerializeField] public SteamVR_Action_Boolean leftHandTrigger;
     [SerializeField] public SteamVR_Action_Pose rightHandPose;
     [SerializeField] public SteamVR_Action_Pose leftHandPose;
+    public GameObject swimSound;
 
     private new Rigidbody rigidbody;
     private Vector3 currentDirection;
@@ -48,8 +49,10 @@ public class SwimmingController : MonoBehaviour
             var squaredDeadzone = deadZone * deadZone;
             if (localVelocity.sqrMagnitude > squaredDeadzone && currentWaitTime > interval)
             {
+                swimSound.SetActive(true);
                 AddSwimmingForce(localVelocity);
                 currentWaitTime = 0f;
+                StartCoroutine (stopSound());
             }
         }
         ApplyReststanceForce();
@@ -72,5 +75,10 @@ public class SwimmingController : MonoBehaviour
         Vector3 worldSpaceVelocity = trackingSpace.TransformDirection(localVelocity); // transforms from world space to local space
         rigidbody.AddForce(worldSpaceVelocity * swimmingForce, ForceMode.Acceleration);
         currentDirection = worldSpaceVelocity.normalized;
+        
+    }
+    IEnumerator stopSound(){
+        yield return new WaitForSeconds(.5f);
+        swimSound.SetActive(false);
     }
 }
