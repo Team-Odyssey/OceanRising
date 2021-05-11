@@ -2284,7 +2284,6 @@ GameObject:
   - component: {fileID: 3274794371127596575}
   - component: {fileID: 3274794371127596574}
   - component: {fileID: 3274794371127596573}
-  - component: {fileID: 2662945216000636318}
   m_Layer: 26
   m_Name: RightHand
   m_TagString: Untagged
@@ -2414,22 +2413,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   hand: {fileID: 0}
---- !u!114 &2662945216000636318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3274794371127596571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1 &3274794371152122969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,7 +3140,6 @@ GameObject:
   - component: {fileID: 3274794371843109456}
   - component: {fileID: 3274794371843109458}
   - component: {fileID: 3274794371843109457}
-  - component: {fileID: 1519354355302950307}
   m_Layer: 26
   m_Name: LeftHand
   m_TagString: Untagged
@@ -3287,22 +3269,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   hand: {fileID: 0}
---- !u!114 &1519354355302950307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3274794371843109471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1 &3274794371935545692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,7 +3289,7 @@ GameObject:
   - component: {fileID: 179126877676161048}
   - component: {fileID: 7125037016680760013}
   m_Layer: 0
-  m_Name: Network Player
+  m_Name: Test Player
   m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -3520,8 +3486,6 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 1519354355302950307}
-  - {fileID: 2662945216000636318}
   - {fileID: 1683190632706848406}
   sceneViewId: 0
   InstantiationId: 0
@@ -3538,7 +3502,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa601991640bcbc4aa08ce0a76fc339c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VRcam: {fileID: 0}
+  head: {fileID: 6106053138194901788}
+  leftHand: {fileID: 3274794371843109471}
+  rightHand: {fileID: 3274794371127596571}
+  VRcam: {fileID: 3274794370000207817}
+  canvas: {fileID: 3274794370720933285}
 --- !u!1 &3274794372078121959
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,32 +8,46 @@ using FMODUnity;
 
 public class networkPlayer : MonoBehaviour
 {
-    // public Transform head;
-    // public Transform leftHand;
-    // public Transform rightHand;
+    public Transform head;
+    public GameObject leftHand;
+    public GameObject rightHand;
     private PhotonView photonView;
     private StudioListener listener;
-    public Camera VRcam;
+    public GameObject VRcam;
+    public GameObject canvas;
 
     void Start(){
         photonView = GetComponent<PhotonView>();
         listener = GetComponent<StudioListener>();
+        
     }
     void Update(){
         if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
         {
-            if(VRcam.enabled == true)
-                VRcam.enabled = false; 
+            if(VRcam.GetComponent<Camera>().enabled == true){
+                MonoBehaviour[] comps = GetComponents<MonoBehaviour>();
+                foreach(MonoBehaviour c in comps)
+                {
+                    c.enabled = false;
+                }
+                foreach(Behaviour comp in VRcam.GetComponents<Behaviour>()){ 
+                    comp.enabled = false;
+                }
+                rightHand.gameObject.SetActive(false);
+                leftHand.gameObject.SetActive(false);
+                canvas.gameObject.SetActive(false);
+            }
+                
             return;
         }
         // if(photonView.IsMine){
-        //     // rightHand.gameObject.SetActive(false);
-        //     // leftHand.gameObject.SetActive(false);
-        //     // head.gameObject.SetActive(false);
+        //     rightHand.gameObject.SetActive(false);
+        //     leftHand.gameObject.SetActive(false);
+        //     head.gameObject.SetActive(false);
 
-        //     // MapPosition(head, XRNode.Head);
-        //     // MapPosition(leftHand, XRNode.LeftHand);
-        //     // MapPosition(rightHand, XRNode.RightHand);
+        //     MapPosition(head, XRNode.Head);
+        //     MapPosition(leftHand, XRNode.LeftHand);
+        //     MapPosition(rightHand, XRNode.RightHand);
 
         // }
         
