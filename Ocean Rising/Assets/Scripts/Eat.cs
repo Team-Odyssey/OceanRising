@@ -8,6 +8,7 @@ public class Eat : MonoBehaviour
     public HealthLevel healthLevel;
     public PowerUp powerLevel;
     public int count = 0;
+    public GameObject bloodSplatter;
     
     void OnTriggerEnter(Collider other)
     {
@@ -18,6 +19,7 @@ public class Eat : MonoBehaviour
             powerLevel.AddPower(1f);
 
             count += 1;
+            GameObject.Instantiate(bloodSplatter);
             Destroy(other.gameObject);
         }
     }

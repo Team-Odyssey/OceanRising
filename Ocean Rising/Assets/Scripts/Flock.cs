@@ -12,6 +12,8 @@ public class Flock : MonoBehaviour
 	public Transform playerTransform;
 	Transform predatorTransform;
 
+	public GameObject bloodSplatter;
+
 	//
 	//Transform predator;
 
