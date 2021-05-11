@@ -17,7 +17,11 @@ public class SynHead : MonoBehaviour
         float camY = VRcam.transform.eulerAngles.y;
         float camX = VRcam.transform.eulerAngles.x;
         float camZ = VRcam.transform.eulerAngles.z;
+        float posY = VRcam.transform.position.y;
+        float posX = VRcam.transform.position.x;
+        float posZ = VRcam.transform.position.z;
         transform.eulerAngles = new Vector3(camX,camY,camZ);
+        transform.position = new Vector3(posX,posY,posZ);
         
     }
 }
