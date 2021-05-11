@@ -13620,6 +13620,8 @@ GameObject:
   - component: {fileID: 383945572}
   - component: {fileID: 383945571}
   - component: {fileID: 383945575}
+  - component: {fileID: 383945576}
+  - component: {fileID: 383945577}
   m_Layer: 5
   m_Name: SettingsMenu
   m_TagString: Untagged
@@ -13721,6 +13723,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
   resolutionDropDown: {fileID: 544379397}
+--- !u!114 &383945576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383945570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ae1e94d2084e14aa03e706c152a4e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &383945577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383945570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42542f400fc2e094ea634c48cf178a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPanel: {fileID: 0}
 --- !u!1001 &384958099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32661,6 +32688,7 @@ GameObject:
   - component: {fileID: 900172207}
   - component: {fileID: 900172206}
   - component: {fileID: 900172210}
+  - component: {fileID: 900172211}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -32769,6 +32797,19 @@ MonoBehaviour:
   pausedCamera: {fileID: 1733484698}
   pauseMenu: {fileID: 900172205}
   m_DefaultLength: 5
+--- !u!114 &900172211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900172205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42542f400fc2e094ea634c48cf178a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPanel: {fileID: 0}
 --- !u!4 &900378805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 562754814327786542, guid: 6dc3d25f68874674c90c8a76d00442ad,
@@ -34664,12 +34705,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 900172210}
-        m_MethodName: ResumeGame
-        m_Mode: 1
+      - m_Target: {fileID: 900172211}
+        m_MethodName: SetCurrentWithHistory
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 383945576}
+          m_ObjectArgumentAssemblyTypeName: Panel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -67489,7 +67530,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1923849072}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 383945577}
+        m_MethodName: GoToPrevious
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1923849072
 MonoBehaviour:
   m_ObjectHideFlags: 0
