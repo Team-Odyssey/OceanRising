@@ -25,7 +25,7 @@ public class networkPlayer : MonoBehaviour
         
     }
     void Update(){
-        if (photonView.IsMine == true && PhotonNetwork.IsConnected == true)
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
         {
             if(deleted == false){
                 MonoBehaviour[] comps = GetComponents<MonoBehaviour>();
