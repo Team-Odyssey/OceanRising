@@ -1765,6 +1765,7 @@ MonoBehaviour:
   healthLevel: {fileID: 3274794371935545695}
   powerLevel: {fileID: 3274794371935545693}
   count: 0
+  bloodSplatter: {fileID: 0}
 --- !u!1 &3274794370829712055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,6 +3344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202a6e24b48d1684398409c47161adcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodSplatter: {fileID: 0}
   trackingOriginTransform: {fileID: 3274794371935545685}
   hmdTransforms:
   - {fileID: 3274794370000207818}

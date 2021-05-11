@@ -16,7 +16,7 @@ namespace Valve.VR.InteractionSystem
 	//-------------------------------------------------------------------------
 	public class Player : MonoBehaviour
 	{
-		public GameObject bloodSplatter;
+		
 
 		[Tooltip( "Virtual transform corresponding to the meatspace tracking origin. Devices are tracked relative to this." )]
 		public Transform trackingOriginTransform;
