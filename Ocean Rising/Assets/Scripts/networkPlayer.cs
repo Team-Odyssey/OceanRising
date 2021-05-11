@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.XR;
 using Photon.Pun;
 using FMODUnity;
+using UnityEngine.SpatialTracking;
 
 
 public class networkPlayer : MonoBehaviour
@@ -13,7 +14,11 @@ public class networkPlayer : MonoBehaviour
     public GameObject rightHand;
     private PhotonView photonView;
     private StudioListener listener;
-    public GameObject VRcam;
+    public GameObject vrCam;
+    public Camera camcam;
+    public GameObject canvas;
+    public GameObject oceanOne;
+    public GameObject oceanTwo;
     public GameObject input;
     public GameObject snap;
     private bool deleted = false;
@@ -25,7 +30,7 @@ public class networkPlayer : MonoBehaviour
         
     }
     void Update(){
-        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        if (photonView.IsMine == true && PhotonNetwork.IsConnected == true)
         {
             if(deleted == false){
                 MonoBehaviour[] comps = GetComponents<MonoBehaviour>();
@@ -33,8 +38,19 @@ public class networkPlayer : MonoBehaviour
                 {
                     c.enabled = false;
                 }
+                MonoBehaviour[] cam = vrCam.GetComponents<MonoBehaviour>();
+                foreach(MonoBehaviour d in cam)
+                {
+                    if(d.name != "Photon Transorm View" || d.name != "Tracked Pose Driver")
+                        d.enabled = false;
+                }
+                camcam.enabled = false;
+                vrCam.GetComponent<PhotonTransformView>().enabled = true;
+                vrCam.GetComponent<TrackedPoseDriver>().enabled = true;
                 GetComponent<PhotonTransformView>().enabled = true;
-                VRcam.SetActive(false);
+                canvas.SetActive(false);
+                oceanOne.SetActive(false);
+                oceanTwo.SetActive(false);
                 rightHand.gameObject.SetActive(false);
                 leftHand.gameObject.SetActive(false);
                 input.gameObject.SetActive(false);
