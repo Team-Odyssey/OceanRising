@@ -1,206 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9073554485496565495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/3D Music/Cave
-  m_EditorClassIdentifier: 
-  Path: event:/3D Music/Cave
-  guid: 8b1c1180953a634690ffb766040ac510
-  Banks:
-  - {fileID: 1029310217633949316}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 42213
---- !u!114 &-6715448223776406982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-<<<<<<< HEAD
-  lastModified: 637544500502659061
-=======
-  lastModified: 637546296374274119
->>>>>>> 93041caa3e38b625ef0c2463c62f114d8d27794a
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1138
-  Exists: 1
---- !u!114 &-6668554897477445960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Predator
-  m_EditorClassIdentifier: 
-  Path: event:/Music/Predator
-  guid: dc9821f24d43244dbab1a652ea53c7b1
-  Banks:
-  - {fileID: 1029310217633949316}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 37330
---- !u!114 &-6636467558851303384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/EatSmall
-  m_EditorClassIdentifier: 
-  Path: event:/Music/EatSmall
-  guid: 40b1fbfcb0c67e4eaeb74f9eda4f1735
-  Banks:
-  - {fileID: 1029310217633949316}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1000
---- !u!114 &-5123789649706865283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/UpBeat
-  m_EditorClassIdentifier: 
-  Path: event:/Music/UpBeat
-  guid: 0b387e71260b9a4381b7abe84e794429
-  Banks:
-  - {fileID: 1029310217633949316}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 34899
---- !u!114 &-3040586707667394835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/3D Music/Eat
-  m_EditorClassIdentifier: 
-  Path: event:/3D Music/Eat
-  guid: fec74412e43d7f4284100305abacc5b2
-  Banks:
-  - {fileID: 1029310217633949316}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1000
---- !u!114 &-2518709197756693536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/3D Music/UpBeat
-  m_EditorClassIdentifier: 
-  Path: event:/3D Music/UpBeat
-  guid: 9ff6fbb546d42441914c0fb091e502d1
-  Banks:
-  - {fileID: 1029310217633949316}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 34899
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -6715448223776406982}
-  - {fileID: 1029310217633949316}
-  EditorEvents:
-  - {fileID: 1200346122222958796}
-  - {fileID: -5123789649706865283}
-  - {fileID: -6636467558851303384}
-  - {fileID: 1627235540338311354}
-  - {fileID: 6529928067921219512}
-  - {fileID: -9073554485496565495}
-  - {fileID: 6345138096295373708}
-  - {fileID: -2518709197756693536}
-  - {fileID: -6668554897477445960}
-  - {fileID: -3040586707667394835}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 1029310217633949316}
-  StringsBanks:
-  - {fileID: -6715448223776406982}
-<<<<<<< HEAD
-  stringsBankWriteTime: 637544500502659061
-=======
-  stringsBankWriteTime: 637546296374274119
->>>>>>> 93041caa3e38b625ef0c2463c62f114d8d27794a
-  cacheVersion: 6
---- !u!114 &1029310217633949316
+--- !u!114 &-6614293396551213097
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,15 +15,157 @@ MonoBehaviour:
   Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-<<<<<<< HEAD
   lastModified: 637544500502639059
-=======
-  lastModified: 637546296374274119
->>>>>>> 93041caa3e38b625ef0c2463c62f114d8d27794a
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &1200346122222958796
+--- !u!114 &-3266325112795928342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/UpBeat
+  m_EditorClassIdentifier: 
+  Path: event:/Music/UpBeat
+  guid: 0b387e71260b9a4381b7abe84e794429
+  Banks:
+  - {fileID: -6614293396551213097}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 34899
+--- !u!114 &-2174111869500437496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/EatSmall
+  m_EditorClassIdentifier: 
+  Path: event:/Music/EatSmall
+  guid: 40b1fbfcb0c67e4eaeb74f9eda4f1735
+  Banks:
+  - {fileID: -6614293396551213097}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &-1988543242592981020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Predator
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Predator
+  guid: dc9821f24d43244dbab1a652ea53c7b1
+  Banks:
+  - {fileID: -6614293396551213097}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 37330
+--- !u!114 &-460279930555712790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Sounds/Fmod/OceanFmod/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637544500502659061
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1138
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -460279930555712790}
+  - {fileID: -6614293396551213097}
+  EditorEvents:
+  - {fileID: 4724751756944954163}
+  - {fileID: -3266325112795928342}
+  - {fileID: -2174111869500437496}
+  - {fileID: 7730487737036906386}
+  - {fileID: 8027187133028763290}
+  - {fileID: 6764839994925433857}
+  - {fileID: 5590106587298427274}
+  - {fileID: 8457559228685466121}
+  - {fileID: -1988543242592981020}
+  - {fileID: 2223912847842562353}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -6614293396551213097}
+  StringsBanks:
+  - {fileID: -460279930555712790}
+  stringsBankWriteTime: 637544500502659061
+  cacheVersion: 6
+--- !u!114 &2223912847842562353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Music/Eat
+  m_EditorClassIdentifier: 
+  Path: event:/3D Music/Eat
+  guid: fec74412e43d7f4284100305abacc5b2
+  Banks:
+  - {fileID: -6614293396551213097}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &4724751756944954163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,7 +180,7 @@ MonoBehaviour:
   Path: event:/3D Music/MainTheme
   guid: 0ab846cfffe0724ab8adb14828762fe7
   Banks:
-  - {fileID: 1029310217633949316}
+  - {fileID: -6614293396551213097}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -246,30 +188,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 59376
---- !u!114 &1627235540338311354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/OceanTheme
-  m_EditorClassIdentifier: 
-  Path: event:/Music/OceanTheme
-  guid: 76b4e71ab0c7054fbee19196aeba288c
-  Banks:
-  - {fileID: 1029310217633949316}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 59376
---- !u!114 &6345138096295373708
+--- !u!114 &5590106587298427274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,7 +203,7 @@ MonoBehaviour:
   Path: event:/3D Music/Predator
   guid: 8c5cd71b8fac02448e77164793b910c1
   Banks:
-  - {fileID: 1029310217633949316}
+  - {fileID: -6614293396551213097}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -292,7 +211,53 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 37330
---- !u!114 &6529928067921219512
+--- !u!114 &6764839994925433857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Music/Cave
+  m_EditorClassIdentifier: 
+  Path: event:/3D Music/Cave
+  guid: 8b1c1180953a634690ffb766040ac510
+  Banks:
+  - {fileID: -6614293396551213097}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42213
+--- !u!114 &7730487737036906386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/OceanTheme
+  m_EditorClassIdentifier: 
+  Path: event:/Music/OceanTheme
+  guid: 76b4e71ab0c7054fbee19196aeba288c
+  Banks:
+  - {fileID: -6614293396551213097}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 59376
+--- !u!114 &8027187133028763290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,7 +272,7 @@ MonoBehaviour:
   Path: event:/Music/DeeoOcean
   guid: 87bcc0a949f2934289e076a6153d8373
   Banks:
-  - {fileID: 1029310217633949316}
+  - {fileID: -6614293396551213097}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -315,3 +280,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 42213
+--- !u!114 &8457559228685466121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/3D Music/UpBeat
+  m_EditorClassIdentifier: 
+  Path: event:/3D Music/UpBeat
+  guid: 9ff6fbb546d42441914c0fb091e502d1
+  Banks:
+  - {fileID: -6614293396551213097}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34899
