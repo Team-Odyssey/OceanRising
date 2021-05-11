@@ -33,6 +33,7 @@ public class networkPlayer : MonoBehaviour
                 {
                     c.enabled = false;
                 }
+                GetComponent<PhotonTransformView>().enabled = true;
                 VRcam.SetActive(false);
                 rightHand.gameObject.SetActive(false);
                 leftHand.gameObject.SetActive(false);
