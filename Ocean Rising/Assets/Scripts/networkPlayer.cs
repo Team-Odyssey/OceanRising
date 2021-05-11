@@ -30,9 +30,7 @@ public class networkPlayer : MonoBehaviour
                 {
                     c.enabled = false;
                 }
-                foreach(Behaviour comp in VRcam.GetComponents<Behaviour>()){ 
-                    comp.enabled = false;
-                }
+                VRcam.GetComponent<Camera>().enabled = false;
                 rightHand.gameObject.SetActive(false);
                 leftHand.gameObject.SetActive(false);
                 canvas.gameObject.SetActive(false);
