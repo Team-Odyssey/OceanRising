@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6106053138194901788}
   - component: {fileID: 8678207681246052049}
+  - component: {fileID: 6061136774955589650}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -45,6 +46,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VRcam: {fileID: 3274794370000207808}
+--- !u!114 &6061136774955589650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3157126912636411767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &3274794370000207817
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +664,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3274794370230811868}
-  - component: {fileID: 4359067641939223477}
   m_Layer: 0
   m_Name: SteamVRObjects
   m_TagString: Untagged
@@ -675,29 +691,6 @@ Transform:
   m_Father: {fileID: 3274794371935545685}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4359067641939223477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3274794370230811867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents:
-  - {fileID: 0}
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
 --- !u!1 &3274794370233827179
 GameObject:
   m_ObjectHideFlags: 0
@@ -3643,22 +3636,6 @@ Transform:
   m_Father: {fileID: 3274794370640806693}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2278688543493954499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4031127461209805342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1001 &1251406197323270954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3777,12 +3754,6 @@ PrefabInstance:
 --- !u!4 &4375987825008167076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3307686065156309902, guid: b8dd5a3e7bcbb1448901bb2f79df6235,
-    type: 3}
-  m_PrefabInstance: {fileID: 1251406197323270954}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4031127461209805342 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2786763206500456756, guid: b8dd5a3e7bcbb1448901bb2f79df6235,
     type: 3}
   m_PrefabInstance: {fileID: 1251406197323270954}
   m_PrefabAsset: {fileID: 0}
