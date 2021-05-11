@@ -664,7 +664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3274794370230811868}
-  - component: {fileID: 7355671798272640196}
+  - component: {fileID: 4359067641939223477}
   m_Layer: 0
   m_Name: SteamVRObjects
   m_TagString: Untagged
@@ -692,7 +692,7 @@ Transform:
   m_Father: {fileID: 3274794371935545685}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7355671798272640196
+--- !u!114 &4359067641939223477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3325,6 +3325,7 @@ GameObject:
   - component: {fileID: 3274794371935545694}
   - component: {fileID: 3274794371935545693}
   - component: {fileID: 7125037016680760013}
+  - component: {fileID: 1597668740307553079}
   m_Layer: 0
   m_Name: Test Player
   m_TagString: Player
@@ -3520,7 +3521,31 @@ MonoBehaviour:
   leftHand: {fileID: 3274794371843109471}
   rightHand: {fileID: 3274794371127596571}
   VRcam: {fileID: 3274794370000207817}
-  canvas: {fileID: 3274794370720933285}
+  input: {fileID: 3274794371049162395}
+  snap: {fileID: 3274794370655390650}
+--- !u!114 &1597668740307553079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3274794371935545692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 1683190632706848406}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &3274794372078121959
 GameObject:
   m_ObjectHideFlags: 0

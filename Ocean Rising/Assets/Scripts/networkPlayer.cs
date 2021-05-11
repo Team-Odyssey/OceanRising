@@ -14,7 +14,10 @@ public class networkPlayer : MonoBehaviour
     private PhotonView photonView;
     private StudioListener listener;
     public GameObject VRcam;
-    public GameObject canvas;
+    public GameObject input;
+    public GameObject snap;
+    private bool deleted = false;
+
 
     void Start(){
         photonView = GetComponent<PhotonView>();
@@ -22,9 +25,9 @@ public class networkPlayer : MonoBehaviour
         
     }
     void Update(){
-        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        if (photonView.IsMine == true && PhotonNetwork.IsConnected == true)
         {
-            if(VRcam.GetComponent<Camera>().enabled == true){
+            if(deleted == false){
                 MonoBehaviour[] comps = GetComponents<MonoBehaviour>();
                 foreach(MonoBehaviour c in comps)
                 {
@@ -33,7 +36,9 @@ public class networkPlayer : MonoBehaviour
                 VRcam.SetActive(false);
                 rightHand.gameObject.SetActive(false);
                 leftHand.gameObject.SetActive(false);
-                canvas.gameObject.SetActive(false);
+                input.gameObject.SetActive(false);
+                snap.gameObject.SetActive(false);
+                deleted = true;
             }
                 
             return;
