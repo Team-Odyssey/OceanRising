@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 383945575}
+      - m_Target: {fileID: 0}
         m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
@@ -2577,7 +2577,7 @@ RectTransform:
   m_Children:
   - {fileID: 501767609}
   m_Father: {fileID: 1787001474}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13619,7 +13619,7 @@ GameObject:
   - component: {fileID: 383945573}
   - component: {fileID: 383945572}
   - component: {fileID: 383945571}
-  - component: {fileID: 383945575}
+  - component: {fileID: 383945576}
   m_Layer: 5
   m_Name: SettingsMenu
   m_TagString: Untagged
@@ -13694,20 +13694,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383945570}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.69440174, y: 0.73775595, z: 0.69440174}
   m_Children:
   - {fileID: 1004867514}
   m_Father: {fileID: 900172209}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 419.99957, y: 281.5}
-  m_SizeDelta: {x: 839.99994, y: 563}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -26.00003}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &383945575
+--- !u!114 &383945576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13716,11 +13716,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 383945570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e54dace4a8f8bd4188b1c9a89453573, type: 3}
+  m_Script: {fileID: 11500000, guid: e6ae1e94d2084e14aa03e706c152a4e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: ec12f7772c03e4c4c9e4c2f1643595ad, type: 2}
-  resolutionDropDown: {fileID: 544379397}
 --- !u!1001 &384958099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19469,7 +19467,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 383945575}
+      - m_Target: {fileID: 0}
         m_MethodName: SetResolution
         m_Mode: 0
         m_Arguments:
@@ -32664,7 +32662,7 @@ GameObject:
   - component: {fileID: 900172211}
   - component: {fileID: 900172212}
   m_Layer: 5
-  m_Name: Pause
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34642,7 +34640,7 @@ RectTransform:
   m_Children:
   - {fileID: 2050171786}
   m_Father: {fileID: 1787001474}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -34696,7 +34694,7 @@ MonoBehaviour:
         m_MethodName: SetCurrentWithHistory
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 383945576}
           m_ObjectArgumentAssemblyTypeName: Panel, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -63055,7 +63053,7 @@ GameObject:
   - component: {fileID: 1787001476}
   - component: {fileID: 1787001475}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63073,8 +63071,8 @@ RectTransform:
   m_LocalScale: {x: 0.69440174, y: 0.73775595, z: 0.69440174}
   m_Children:
   - {fileID: 96898209}
-  - {fileID: 949970219}
   - {fileID: 80898469}
+  - {fileID: 949970219}
   - {fileID: 2001215310}
   - {fileID: 1121957870}
   m_Father: {fileID: 900172209}
@@ -72979,7 +72977,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 383945575}
+      - m_Target: {fileID: 0}
         m_MethodName: SetFullScreen
         m_Mode: 0
         m_Arguments:
