@@ -20,6 +20,7 @@ public class Eat : MonoBehaviour
 
             //ps.Play();
             bloodSplatter.SetActive(true);
+            StartCoroutine (StopBlood());
 
             healthLevel.AddHealth(100f);
             powerLevel.AddPower(1f);
@@ -41,5 +42,9 @@ public class Eat : MonoBehaviour
     void Update()
     {
         score.text = "Fishes Eaten: " + count;
+    }
+    IEnumerator StopBlood(){
+        yield return new WaitForSeconds(1);
+        bloodSplatter.SetActive(false);
     }
 }

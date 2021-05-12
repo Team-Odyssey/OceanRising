@@ -1783,6 +1783,7 @@ MonoBehaviour:
   powerLevel: {fileID: 3274794371935545693}
   count: 0
   score: {fileID: 0}
+  bloodSplatter: {fileID: 0}
 --- !u!1 &3274794370829712055
 GameObject:
   m_ObjectHideFlags: 0
