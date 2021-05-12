@@ -7,13 +7,78 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000021235AD2488 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000027CA801C048 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : Underwater Sound (1 Hour) (0000027C947639E8)
+[LOG] SoundI::release                          :     Underwater Sound (1 Hour) (0000027C4B90D568)
+[LOG] SoundI::release                          :     Underwater Sound (1 Hour) (0000027C947691A8)
+[LOG] SoundI::release                          : Predator_Track (0000027C947614C8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90CEE8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476B368)
+[LOG] SoundI::release                          : Predator_Track (0000027C94760748)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90CD48)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476CB08)
+[LOG] SoundI::release                          : Predator_Track (0000027C94760C58)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90B348)
+[LOG] SoundI::release                          :     Predator_Track (0000027C94766FE8)
+[LOG] SoundI::release                          : Predator_Track (0000027C94760E08)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B910CA8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476D528)
+[LOG] SoundI::release                          : Predator_Track (0000027C947608F8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90D088)
+[LOG] SoundI::release                          :     Predator_Track (0000027C94768AE8)
+[LOG] SoundI::release                          : Predator_Track (0000027C947659F8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90D3C8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C94766E38)
+[LOG] SoundI::release                          : Predator_Track (0000027C94766268)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90B1A8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476A798)
+[LOG] SoundI::release                          : Predator_Track (0000027C94766AD8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90D228)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476A288)
+[LOG] SoundI::release                          : Predator_Track (0000027C94765F08)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90B688)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476C298)
+[LOG] SoundI::release                          : Predator_Track (0000027C94763B98)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90E0C8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476D378)
+[LOG] SoundI::release                          : Predator_Track (0000027C94765BA8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90D708)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476A438)
+[LOG] SoundI::release                          : Predator_Track (0000027C947619D8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90F448)
+[LOG] SoundI::release                          :     Predator_Track (0000027C94768E48)
+[LOG] SoundI::release                          : Predator_Track (0000027C9476CE68)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90DD88)
+[LOG] SoundI::release                          :     Predator_Track (0000027C94769F28)
+[LOG] SoundI::release                          : Predator_Track (0000027C94760238)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90B828)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476A948)
+[LOG] SoundI::release                          : Predator_Track (0000027C9476C0E8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B90C388)
+[LOG] SoundI::release                          :     Predator_Track (0000027C94767348)
+[LOG] SoundI::release                          : Predator_Track (0000027C94760FB8)
+[LOG] SoundI::release                          :     Predator_Track (0000027C4B910E48)
+[LOG] SoundI::release                          :     Predator_Track (0000027C9476D018)
+[LOG] SoundI::release                          : Deep_Ocean_Sketch (0000027C94764E28)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (0000027C4B9063A8)
+[LOG] SoundI::release                          :     Deep_Ocean_Sketch (0000027C94768278)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
@@ -28,3 +93,8 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+<<<<<<< HEAD
+=======
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
+>>>>>>> 11b0418d4144ea24963b89f7f9d5e724a931d023
