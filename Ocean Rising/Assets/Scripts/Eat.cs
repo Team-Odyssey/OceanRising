@@ -24,10 +24,10 @@ public class Eat : MonoBehaviour
 
     void Start()
     {
-        score.text = "Score: ";
+        score.text = "Fishes Eaten: ";
     }
     void Update()
     {
-        score.text = "Score: " + count;
+        score.text = "Fishes Eaten: " + count;
     }
 }
