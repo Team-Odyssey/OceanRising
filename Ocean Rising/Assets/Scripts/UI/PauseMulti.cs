@@ -1,19 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using Valve.VR;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMulti : MonoBehaviour
 {
     [SerializeField] public SteamVR_Action_Boolean menuButton;
-    public GameObject playingPlayer;
-    public Camera playerCamera;
+    public GameObject player;
     public GameObject pausedPlayer;
-    public Camera pausedCamera;
-    public AudioSource audio;
+    public Camera camera;
     public static bool isGamePaused = false;
     public GameObject pauseMenu;
     public float m_DefaultLength = 5.0f;
@@ -26,19 +23,15 @@ public class PauseMenu : MonoBehaviour
     {
         // playingPlayer.SetActive(false);
         // m_Dot.SetActive(false);
-        pausedPlayer.SetActive(true);
-        pausedPlayer.SetActive(false);
+        player.SetActive(true);
         pauseMenu.SetActive(false);
-        playingPlayer.SetActive(true);
-        pausedCamera.enabled = false;
+        pausedPlayer.SetActive(false);
     }
     void Update()
     {
         bool menuButtonPressed = menuButton.state;
         if(menuButtonPressed)
         {
-            playingPlayer.SetActive(false);
-            pausedPlayer.SetActive(true);
             PauseGame();
             // UpdateLine();
         }
@@ -47,34 +40,25 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        pausedPlayer.SetActive(false);
-        playingPlayer.SetActive(true);
-        pausedCamera.enabled = false;
-        playerCamera.enabled = true;
         pauseMenu.SetActive(false);
+        pausedPlayer.SetActive(false);
+        player.SetActive(true);
         isGamePaused = false;
-        Time.timeScale = 1f;
-        audio.Play();
         Debug.Log("Game has resumed");
         // m_Dot.SetActive(false);
     }
     public void PauseGame()
     {
-        playingPlayer.SetActive(false);
-        pausedPlayer.SetActive(true);
-        pausedCamera.enabled = true;
-        playerCamera.enabled = false;
+        player.SetActive(false);
         pauseMenu.SetActive(true);
+        pausedPlayer.SetActive(true);
         isGamePaused = true;
-        audio.Stop();
-        Time.timeScale = 0f;
         Debug.Log("Game is Paused");
     }
 
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        audio.Stop();
         SceneManager.LoadScene("Menu");
         Debug.Log("Menu has been loaded");
     }
