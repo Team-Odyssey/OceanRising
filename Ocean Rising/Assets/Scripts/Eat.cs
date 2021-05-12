@@ -14,14 +14,17 @@ public class Eat : MonoBehaviour
     {
         if (other.gameObject.tag.Equals( "TestFood"))
         {
-
             healthLevel.AddHealth(100f);
             powerLevel.AddPower(1f);
 
             count += 1;
+
             GameObject.Instantiate(bloodSplatter);
-            Debug.Log("bloodSplater");
+            //bloodSplatter.SetActive(true);
+            Debug.Log("bloodSplater triggered by Eat.cs");
             Destroy(other.gameObject);
+
+            //bloodSplatter.SetActive(false);
         }
     }
 }
