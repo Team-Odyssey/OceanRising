@@ -20,6 +20,7 @@ public class Eat : MonoBehaviour
 
             count += 1;
             GameObject.Instantiate(bloodSplatter);
+            Debug.Log("bloodSplater");
             Destroy(other.gameObject);
         }
     }
