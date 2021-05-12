@@ -1512,10 +1512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc9b4c0cac904f43b02b2c22979de4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   respawnPoint: {fileID: 0}
-  healthLevel: {fileID: 0}
-  powerLevel: {fileID: 0}
 --- !u!95 &1632197516250231520
 Animator:
   serializedVersion: 3

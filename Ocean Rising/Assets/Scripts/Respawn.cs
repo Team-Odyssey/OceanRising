@@ -6,9 +6,13 @@ public class Respawn : MonoBehaviour
 {
     private Transform player;
 
-    public Transform respawnPoint;
+    private Transform respawnPoint;
     private HealthLevel healthLevel;
     private PowerUp powerLevel;
+
+    void Start(){
+        respawnPoint = GameObject.FindGameObjectWithTag("Respawn").transform;
+    }
 
     void OnTriggerEnter(Collider other){
         
