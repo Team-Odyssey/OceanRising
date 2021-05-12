@@ -8,7 +8,7 @@ public class Eat : MonoBehaviour
     public HealthLevel healthLevel;
     public PowerUp powerLevel;
     public int count = 0;
-    public GameObject bloodSplatter;
+    public Text score;
     
     void OnTriggerEnter(Collider other)
     {
@@ -17,11 +17,17 @@ public class Eat : MonoBehaviour
 
             healthLevel.AddHealth(100f);
             powerLevel.AddPower(1f);
-
             count += 1;
-            GameObject.Instantiate(bloodSplatter);
-            Debug.Log("bloodSplater");
             Destroy(other.gameObject);
         }
+    }
+
+    void Start()
+    {
+        score.text = "Fishes Eaten: ";
+    }
+    void Update()
+    {
+        score.text = "Fishes Eaten: " + count;
     }
 }
