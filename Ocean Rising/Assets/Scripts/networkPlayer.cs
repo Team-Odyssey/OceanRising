@@ -46,7 +46,7 @@ public class networkPlayer : MonoBehaviour
                 }
                 camcam.enabled = false;
                 vrCam.GetComponent<PhotonTransformView>().enabled = true;
-                vrCam.GetComponent<TrackedPoseDriver>().enabled = true;
+                // vrCam.GetComponent<TrackedPoseDriver>().enabled = true;
                 GetComponent<PhotonTransformView>().enabled = true;
                 canvas.SetActive(false);
                 oceanOne.SetActive(false);
