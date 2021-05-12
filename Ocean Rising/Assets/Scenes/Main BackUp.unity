@@ -26288,6 +26288,11 @@ PrefabInstance:
       propertyPath: lifeSpan
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 872903423579412781, guid: 659c671c0cee5e74590a566b2a65f8b2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2593803918812462116, guid: 659c671c0cee5e74590a566b2a65f8b2,
         type: 3}
       propertyPath: looping
@@ -26397,6 +26402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BloodFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485419101559715574, guid: 659c671c0cee5e74590a566b2a65f8b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3485419101559715574, guid: 659c671c0cee5e74590a566b2a65f8b2,
         type: 3}
