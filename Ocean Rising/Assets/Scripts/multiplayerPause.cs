@@ -9,10 +9,10 @@ using UnityEngine.EventSystems;
 public class multiplayerPause : MonoBehaviour
 {
     [SerializeField] public SteamVR_Action_Boolean menuButton;
-    [SerializeField] public SteamVR_Action_Boolean moveDown;
     [SerializeField] public SteamVR_Action_Boolean moveUp;
+    [SerializeField] public SteamVR_Action_Boolean moveDown;
     [SerializeField] public SteamVR_Action_Boolean selectButton;
-    public Button returnToMenu, quitGame;
+    public GameObject returnToMenu, quitGame;
     public Canvas multiPause;
     public bool state = false;
     private float time = 0f;
@@ -26,6 +26,10 @@ public class multiplayerPause : MonoBehaviour
     void Update()
     {
         bool menuButtonPressed = menuButton.state;
+        bool moveUpPressed = moveUp.state;
+        bool moveDownPressed = moveDown.state;
+        bool selectPressed = selectButton.state;
+
         if (time > 0f){
         // Subtract the difference of the last time the method has been called
             time -= Time.deltaTime;
@@ -34,31 +38,31 @@ public class multiplayerPause : MonoBehaviour
         {
             state = !state;   
             popMenu(state);
+            //clear selected object
+            EventSystem.current.SetSelectedGameObject(null);
+            //set the first selected object
+            EventSystem.current.SetSelectedGameObject(returnToMenu);
+            if(moveDownPressed)
+            {
+                EventSystem.current.SetSelectedGameObject(quitGame);
+                if(selectPressed)
+                {
+                    ExitGame();
+                }
+            }
+            if(moveUpPressed)
+            {
+                EventSystem.current.SetSelectedGameObject(returnToMenu);
+                if(selectPressed)
+                {
+                    ReturnToMenu();
+                }
+            }
             time = .5f;
         }
     }
     void popMenu(bool state){
         multiPause.enabled = state;
-        bool downButtonPressed = moveDown.state;
-        bool upButtonPressed = moveUp.state;
-        bool selectButtonPressed = selectButton.state;
-
-        if(downButtonPressed)
-        {
-            quitGame.Select();
-            if(selectButtonPressed)
-            {
-                ExitGame();
-            }
-        }
-        if(upButtonPressed)
-        {
-            returnToMenu.Select();
-            if(selectButtonPressed)
-            {
-                ReturnToMenu();
-            }
-        }
     }
 
     public void ReturnToMenu()
