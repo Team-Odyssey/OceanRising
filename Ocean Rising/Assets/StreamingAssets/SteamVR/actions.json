@@ -68,6 +68,14 @@
       "requirement": "mandatory"
     },
     {
+      "name": "/actions/default/in/moveUp",
+      "type": "boolean"
+    },
+    {
+      "name": "/actions/default/in/moveDown",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/platformer/in/Move",
       "type": "vector2"
     },

@@ -74,7 +74,6 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        audio.Stop();
         SceneManager.LoadScene("Menu");
         Debug.Log("Menu has been loaded");
     }

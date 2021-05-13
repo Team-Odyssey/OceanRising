@@ -32679,6 +32679,7 @@ MonoBehaviour:
   playerCamera: {fileID: 5791081481426647963}
   pausedPlayer: {fileID: 1651889616}
   pausedCamera: {fileID: 1733484698}
+  audio: {fileID: 0}
   pauseMenu: {fileID: 900172205}
   m_DefaultLength: 5
 --- !u!114 &900172211
@@ -38380,6 +38381,7 @@ MonoBehaviour:
   playerCamera: {fileID: 5791081481426647963}
   pausedPlayer: {fileID: 1651889616}
   pausedCamera: {fileID: 1733484698}
+  audio: {fileID: 0}
   pauseMenu: {fileID: 900172205}
   m_DefaultLength: 5
 --- !u!1 &1064274222

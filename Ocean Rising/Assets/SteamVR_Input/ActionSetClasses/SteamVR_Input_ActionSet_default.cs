@@ -136,5 +136,21 @@ namespace Valve.VR
                 return SteamVR_Actions.default_LeftTrigger;
             }
         }
+        
+        public virtual SteamVR_Action_Boolean moveUp
+        {
+            get
+            {
+                return SteamVR_Actions.default_moveUp;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean moveDown
+        {
+            get
+            {
+                return SteamVR_Actions.default_moveDown;
+            }
+        }
     }
 }
