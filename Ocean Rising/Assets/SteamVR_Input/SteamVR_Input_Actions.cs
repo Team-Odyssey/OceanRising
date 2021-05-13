@@ -47,8 +47,6 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_default_LeftTrigger;
         
-        private static SteamVR_Action_Boolean p_default_MorphFish;
-        
         private static SteamVR_Action_Vector2 p_platformer_Move;
         
         private static SteamVR_Action_Boolean p_platformer_Jump;
@@ -183,14 +181,6 @@ namespace Valve.VR
             }
         }
         
-        public static SteamVR_Action_Boolean default_MorphFish
-        {
-            get
-            {
-                return SteamVR_Actions.p_default_MorphFish.GetCopy<SteamVR_Action_Boolean>();
-            }
-        }
-        
         public static SteamVR_Action_Vector2 platformer_Move
         {
             get
@@ -265,7 +255,6 @@ namespace Valve.VR
                     SteamVR_Actions.default_NewAction,
                     SteamVR_Actions.default_RightTrigger,
                     SteamVR_Actions.default_LeftTrigger,
-                    SteamVR_Actions.default_MorphFish,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -289,7 +278,6 @@ namespace Valve.VR
                     SteamVR_Actions.default_NewAction,
                     SteamVR_Actions.default_RightTrigger,
                     SteamVR_Actions.default_LeftTrigger,
-                    SteamVR_Actions.default_MorphFish,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -312,7 +300,6 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_RightTrigger,
                     SteamVR_Actions.default_LeftTrigger,
-                    SteamVR_Actions.default_MorphFish,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Brake,
                     SteamVR_Actions.buggy_Reset};
@@ -341,7 +328,6 @@ namespace Valve.VR
                     SteamVR_Actions.default_NewAction,
                     SteamVR_Actions.default_RightTrigger,
                     SteamVR_Actions.default_LeftTrigger,
-                    SteamVR_Actions.default_MorphFish,
                     SteamVR_Actions.platformer_Move,
                     SteamVR_Actions.platformer_Jump,
                     SteamVR_Actions.buggy_Steering,
@@ -367,7 +353,6 @@ namespace Valve.VR
             SteamVR_Actions.p_default_NewAction = ((SteamVR_Action_Single)(SteamVR_Action.Create<SteamVR_Action_Single>("/actions/default/in/NewAction")));
             SteamVR_Actions.p_default_RightTrigger = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/RightTrigger")));
             SteamVR_Actions.p_default_LeftTrigger = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/LeftTrigger")));
-            SteamVR_Actions.p_default_MorphFish = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/MorphFish")));
             SteamVR_Actions.p_platformer_Move = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/platformer/in/Move")));
             SteamVR_Actions.p_platformer_Jump = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/platformer/in/Jump")));
             SteamVR_Actions.p_buggy_Steering = ((SteamVR_Action_Vector2)(SteamVR_Action.Create<SteamVR_Action_Vector2>("/actions/buggy/in/Steering")));
