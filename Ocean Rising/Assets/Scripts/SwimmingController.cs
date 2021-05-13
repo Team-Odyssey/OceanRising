@@ -16,15 +16,23 @@ public class SwimmingController : MonoBehaviour
     [SerializeField] public SteamVR_Action_Boolean leftHandTrigger;
     [SerializeField] public SteamVR_Action_Pose rightHandPose;
     [SerializeField] public SteamVR_Action_Pose leftHandPose;
+    public GameObject swimSound;
 
     private new Rigidbody rigidbody;
     private Vector3 currentDirection;
     private float currentWaitTime;
     private float interval;
 
+    [SerializeField] public SteamVR_Action_Boolean MorphFish;
+    private int currentMorphIndex;
+    private bool hasMorphed;
+    [SerializeField] private List<float> morphSpeeds;
+    private float currentSpeed;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        currentSpeed = morphSpeeds[currentMorphIndex];
     }
 
     private void Update()
@@ -48,11 +56,38 @@ public class SwimmingController : MonoBehaviour
             var squaredDeadzone = deadZone * deadZone;
             if (localVelocity.sqrMagnitude > squaredDeadzone && currentWaitTime > interval)
             {
-                AddSwimmingForce(localVelocity);
+                swimSound.SetActive(true);
+                // AddSwimmingForce(localVelocity);
+                AddSwimmingForce(localVelocity * currentSpeed);
                 currentWaitTime = 0f;
+                StartCoroutine (stopSound());
             }
         }
         ApplyReststanceForce();
+
+        bool MorphFishState = MorphFish.state;
+        if (MorphFishState)
+        {
+            if (!hasMorphed)
+            {
+                IncrementIndex();
+                hasMorphed = true;
+                currentSpeed = morphSpeeds[currentMorphIndex];
+            }
+        }
+        else
+        {
+            hasMorphed = false;
+        }
+    }
+    
+    private void IncrementIndex()
+    {
+        currentMorphIndex++;
+        if (currentMorphIndex == morphSpeeds.Count)
+        {
+            currentMorphIndex = 0;
+        }
     }
 
     private void ApplyReststanceForce()
@@ -72,5 +107,10 @@ public class SwimmingController : MonoBehaviour
         Vector3 worldSpaceVelocity = trackingSpace.TransformDirection(localVelocity); // transforms from world space to local space
         rigidbody.AddForce(worldSpaceVelocity * swimmingForce, ForceMode.Acceleration);
         currentDirection = worldSpaceVelocity.normalized;
+        
+    }
+    IEnumerator stopSound(){
+        yield return new WaitForSeconds(.5f);
+        swimSound.SetActive(false);
     }
 }

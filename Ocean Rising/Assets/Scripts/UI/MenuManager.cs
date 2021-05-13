@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,11 +25,13 @@ public class MenuManager : MonoBehaviour
         int lastIndex = panelHistory.Count - 1;
         SetCurrent(panelHistory[lastIndex]);
         panelHistory.RemoveAt(lastIndex);
+        Debug.Log("Previous panel is active");
     }
 
     public void SetCurrentWithHistory(Panel newPanel){
         panelHistory.Add(currentPanel);
         SetCurrent(newPanel);
+        Debug.Log(currentPanel + " is now Active");
     }
 
     private void SetCurrent(Panel newPanel){

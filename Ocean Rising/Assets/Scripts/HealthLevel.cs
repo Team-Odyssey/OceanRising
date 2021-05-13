@@ -13,6 +13,9 @@ public class HealthLevel : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
     public float healthDrain = 0.1f;
+    public Transform player;
+    public Transform respawnPoint;
+    public PowerUp powerLevel;
 
     void Start()
     {
@@ -23,6 +26,11 @@ public class HealthLevel : MonoBehaviour
     void Update()
     {
         currentHealth = Mathf.Clamp(currentHealth - (Time.deltaTime * healthDrain), 0, maxHealth);
+        if(currentHealth <= 0){ 
+            player.transform.position = respawnPoint.transform.position;
+            this.currentHealth = 100f;
+            powerLevel.SetToZero();
+        }
     }
 
     void OnGUI()

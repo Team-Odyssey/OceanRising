@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.underwaterworld.exe",
+      "app_key": "application.generated.unity.oceanrising.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "E:\\Team Odyssey\\OceanRising\\Ocean Rising\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "E:\\Team Odyssey\\newRepo\\OceanRising\\Ocean Rising\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "Underwater world [Testing]"
+          "name": "Ocean Rising [Testing]"
         }
       }
     }
