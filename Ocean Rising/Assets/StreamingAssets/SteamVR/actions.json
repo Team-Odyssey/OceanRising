@@ -68,6 +68,10 @@
       "requirement": "mandatory"
     },
     {
+      "name": "/actions/default/in/MorphFish",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/platformer/in/Move",
       "type": "vector2"
     },

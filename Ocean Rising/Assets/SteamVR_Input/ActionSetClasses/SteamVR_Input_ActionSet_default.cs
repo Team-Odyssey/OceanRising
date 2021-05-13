@@ -136,5 +136,13 @@ namespace Valve.VR
                 return SteamVR_Actions.default_LeftTrigger;
             }
         }
+        
+        public virtual SteamVR_Action_Boolean MorphFish
+        {
+            get
+            {
+                return SteamVR_Actions.default_MorphFish;
+            }
+        }
     }
 }
