@@ -9,6 +9,7 @@ TagManager:
   - Predator
   - Portal
   - Score
+  - clip
   layers:
   - Default
   - TransparentFX
