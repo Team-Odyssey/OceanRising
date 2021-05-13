@@ -76252,6 +76252,11 @@ MonoBehaviour:
     actionPath: /actions/default/in/Pose
     needsReinit: 0
   swimSound: {fileID: 642453803}
+  MorphFish:
+    actionPath: /actions/default/in/MorphFish
+    needsReinit: 0
+  morphSpeeds:
+  - 1
 --- !u!124 &3526354187144006912
 Behaviour:
   m_ObjectHideFlags: 0
