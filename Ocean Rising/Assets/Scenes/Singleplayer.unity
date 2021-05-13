@@ -22479,6 +22479,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
         type: 3}
+      propertyPath: StopEvent
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
+        type: 3}
       propertyPath: OverrideMaxDistance
       value: 35
       objectReference: {fileID: 0}
@@ -26953,6 +26958,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
         type: 3}
+      propertyPath: StopEvent
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
+        type: 3}
       propertyPath: OverrideMaxDistance
       value: 35
       objectReference: {fileID: 0}
@@ -29490,6 +29500,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
         type: 3}
+      propertyPath: StopEvent
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
+        type: 3}
       propertyPath: OverrideMaxDistance
       value: 35
       objectReference: {fileID: 0}
@@ -30356,6 +30371,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 530435652}
     m_Modifications:
+    - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
+        type: 3}
+      propertyPath: StopEvent
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
         type: 3}
       propertyPath: OverrideMaxDistance
@@ -76289,6 +76309,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 530435652}
     m_Modifications:
+    - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
+        type: 3}
+      propertyPath: StopEvent
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6579502782719035731, guid: fd04ab6ca28ee4840aad3fddec090155,
         type: 3}
       propertyPath: OverrideMaxDistance
