@@ -2,17 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.underwaterworld.exe",
+      "app_key": "application.generated.unity.oceanrising.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-<<<<<<< HEAD
-      "action_manifest_path": "C:\\Users\\Christian Achacoso\\Documents\\GitHub\\OceanRising\\Ocean Rising\\Assets\\StreamingAssets\\SteamVR\\actions.json",
-=======
-      "action_manifest_path": "C:\\Users\\summe\\Documents\\UNITY\\Ocean Rising\\Ocean Rising\\Assets\\StreamingAssets\\SteamVR\\actions.json",
->>>>>>> parent of 712548cc (Revert "Merge remote-tracking branch 'origin/feature/morphing' into FixedTest")
+      "action_manifest_path": "E:\\Team Odyssey\\newRepo\\OceanRising\\Ocean Rising\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "Underwater world [Testing]"
+          "name": "Ocean Rising [Testing]"
         }
       }
     }
