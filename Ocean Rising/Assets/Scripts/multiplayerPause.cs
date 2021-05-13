@@ -9,10 +9,7 @@ using UnityEngine.EventSystems;
 public class multiplayerPause : MonoBehaviour
 {
     [SerializeField] public SteamVR_Action_Boolean menuButton;
-    [SerializeField] public SteamVR_Action_Boolean moveUp;
-    [SerializeField] public SteamVR_Action_Boolean moveDown;
-    [SerializeField] public SteamVR_Action_Boolean selectButton;
-    public GameObject returnToMenu, quitGame;
+    public GameObject returnToMenu;
     public Canvas multiPause;
     public bool state = false;
     private float time = 0f;
@@ -26,9 +23,6 @@ public class multiplayerPause : MonoBehaviour
     void Update()
     {
         bool menuButtonPressed = menuButton.state;
-        bool moveUpPressed = moveUp.state;
-        bool moveDownPressed = moveDown.state;
-        bool selectPressed = selectButton.state;
 
         if (time > 0f){
         // Subtract the difference of the last time the method has been called
@@ -42,22 +36,6 @@ public class multiplayerPause : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             //set the first selected object
             EventSystem.current.SetSelectedGameObject(returnToMenu);
-            if(moveDownPressed)
-            {
-                EventSystem.current.SetSelectedGameObject(quitGame);
-                if(selectPressed)
-                {
-                    ExitGame();
-                }
-            }
-            if(moveUpPressed)
-            {
-                EventSystem.current.SetSelectedGameObject(returnToMenu);
-                if(selectPressed)
-                {
-                    ReturnToMenu();
-                }
-            }
             time = .5f;
         }
     }
@@ -69,11 +47,5 @@ public class multiplayerPause : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
         Debug.Log("Menu has been loaded");
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-        Debug.Log("Game has quit");
     }
 }
