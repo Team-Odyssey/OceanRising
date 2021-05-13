@@ -13600,7 +13600,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383945570}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 453965895}
@@ -17628,6 +17628,8 @@ MonoBehaviour:
   powerLevel: {fileID: 1064087659}
   count: 0
   score: {fileID: 1916542209}
+  bloodSplatter: {fileID: 3485419101559715574, guid: 659c671c0cee5e74590a566b2a65f8b2,
+    type: 3}
 --- !u!135 &510725824
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38071,8 +38073,8 @@ Transform:
   - {fileID: 1063921514}
   - {fileID: 1063920896}
   - {fileID: 1063987230}
-  - {fileID: 4000012036662984}
   - {fileID: 4000012273505088}
+  - {fileID: 4000012036662984}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
@@ -75484,7 +75486,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1064026130}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012273505088
 Transform:
@@ -75501,7 +75503,7 @@ Transform:
   - {fileID: 4000010715262874}
   - {fileID: 4000013258677934}
   m_Father: {fileID: 1064026130}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012346441560
 Transform:

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Eat : MonoBehaviour
 {
     public HealthLevel healthLevel;
+    private float health;
     public PowerUp powerLevel;
     public int count = 0;
     public Text score;
@@ -41,7 +42,12 @@ public class Eat : MonoBehaviour
     }
     void Update()
     {
+        health = healthLevel.currentHealth;
         score.text = "Fishes Eaten: " + count;
+        if(health == 0)
+        {
+            count = 0;
+        }
     }
     IEnumerator StopBlood(){
         yield return new WaitForSeconds(1);

@@ -22,7 +22,6 @@ public class Respawn : MonoBehaviour
             other.transform.position = respawnPoint.transform.position;
             healthLevel.AddHealth(100f);
             powerLevel.SetToZero();
-
         }
             
     }
