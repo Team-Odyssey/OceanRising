@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using Valve.VR;
@@ -12,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     public Camera playerCamera;
     public GameObject pausedPlayer;
     public Camera pausedCamera;
+    public AudioSource audio;
     public static bool isGamePaused = false;
     public GameObject pauseMenu;
     public float m_DefaultLength = 5.0f;
@@ -52,6 +54,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         isGamePaused = false;
         Time.timeScale = 1f;
+        audio.Play();
         Debug.Log("Game has resumed");
         // m_Dot.SetActive(false);
     }
@@ -63,6 +66,7 @@ public class PauseMenu : MonoBehaviour
         playerCamera.enabled = false;
         pauseMenu.SetActive(true);
         isGamePaused = true;
+        audio.Stop();
         Time.timeScale = 0f;
         Debug.Log("Game is Paused");
     }
