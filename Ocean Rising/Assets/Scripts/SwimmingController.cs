@@ -23,9 +23,16 @@ public class SwimmingController : MonoBehaviour
     private float currentWaitTime;
     private float interval;
 
+    [SerializeField] public SteamVR_Action_Boolean MorphFish;
+    private int currentMorphIndex;
+    private bool hasMorphed;
+    [SerializeField] private List<float> morphSpeeds;
+    private float currentSpeed;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        currentSpeed = morphSpeeds[currentMorphIndex];
     }
 
     private void Update()
@@ -50,12 +57,37 @@ public class SwimmingController : MonoBehaviour
             if (localVelocity.sqrMagnitude > squaredDeadzone && currentWaitTime > interval)
             {
                 swimSound.SetActive(true);
-                AddSwimmingForce(localVelocity);
+                // AddSwimmingForce(localVelocity);
+                AddSwimmingForce(localVelocity * currentSpeed);
                 currentWaitTime = 0f;
                 StartCoroutine (stopSound());
             }
         }
         ApplyReststanceForce();
+
+        bool MorphFishState = MorphFish.state;
+        if (MorphFishState)
+        {
+            if (!hasMorphed)
+            {
+                IncrementIndex();
+                hasMorphed = true;
+                currentSpeed = morphSpeeds[currentMorphIndex];
+            }
+        }
+        else
+        {
+            hasMorphed = false;
+        }
+    }
+    
+    private void IncrementIndex()
+    {
+        currentMorphIndex++;
+        if (currentMorphIndex == morphSpeeds.Count)
+        {
+            currentMorphIndex = 0;
+        }
     }
 
     private void ApplyReststanceForce()
