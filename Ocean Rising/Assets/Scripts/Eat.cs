@@ -31,6 +31,9 @@ public class Eat : MonoBehaviour
             //ps.Stop();
             
         }
+        if (other.gameObject.tag.Equals("Predator")){ 
+            count = 0;
+        }
     }
 
     void Start()
@@ -43,6 +46,7 @@ public class Eat : MonoBehaviour
     {
         score.text = "Fishes Eaten: " + count;
     }
+    
     IEnumerator StopBlood(){
         yield return new WaitForSeconds(1);
         bloodSplatter.SetActive(false);

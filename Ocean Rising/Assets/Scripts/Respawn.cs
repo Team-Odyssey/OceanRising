@@ -10,6 +10,7 @@ public class Respawn : MonoBehaviour
     private HealthLevel healthLevel;
     private PowerUp powerLevel;
 
+
     void Start(){
         respawnPoint = GameObject.FindGameObjectWithTag("Respawn").transform;
     }
@@ -22,7 +23,8 @@ public class Respawn : MonoBehaviour
             other.transform.position = respawnPoint.transform.position;
             healthLevel.AddHealth(100f);
             powerLevel.SetToZero();
-
+            
+            
         }
             
     }

@@ -8,6 +8,7 @@ TagManager:
   - TestFood
   - Predator
   - Portal
+  - Score
   layers:
   - Default
   - TransparentFX
